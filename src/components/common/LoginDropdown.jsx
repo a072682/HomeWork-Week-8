@@ -46,7 +46,7 @@ function LoginDropdown({handleLogout,navigate,userData}) {
         <Dropdown.Toggle as="div" className='icon-dropdown-toggle'>
             <button className='border-0 p-0 d-flex d-flex justify-content-center align-items-center bg-ffffff'>  
                 <div className='navbar-dk-login-img-box'>
-                    <img className='img-set' src="/image/avatar-1.png" alt="" />
+                    <img className='img-set' src={`${import.meta.env.BASE_URL}/image/avatar-1.png`} alt="" />
                 </div>
                 <p className='fw-600 fs-16 lh-15 col-000000 '>Jessica</p> 
             </button>
@@ -58,7 +58,7 @@ function LoginDropdown({handleLogout,navigate,userData}) {
             <div className="icondropdown-list">                                        
                 <div className="icon-header">
                     <div className='icon-img-container'>
-                        <img className='icpn-img' src="/image/avatar-1.png" alt="" />
+                        <img className='icpn-img' src={`${import.meta.env.BASE_URL}image/avatar-1.png`} alt="" />
                     </div>
                     <div className='icon-text-container'>
                         <p className='fw-600 fs-16 lh-15 col-000000 poppins'>Jessica</p>

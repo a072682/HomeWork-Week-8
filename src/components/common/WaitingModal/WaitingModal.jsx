@@ -28,7 +28,7 @@ export default function WaitingModal({open,setOpen,id_name}) {
         <div className="custom-modal-backdrop">
           <div className="custom-modal">
             <WaitingAnimation />
-            <img className='modal-img' src="/image/logo.png" alt="" />
+            <img className='modal-img' src={`${import.meta.env.BASE_URL}image/logo.png`} alt="" />
             <p className='modal-text'>正在處理您的訂單</p>
             {/* <button className="btn btn-dark" onClick={() => setOpen(false)}>關閉</button> */}
           </div>

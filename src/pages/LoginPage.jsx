@@ -44,22 +44,22 @@ function LoginPage (){
     const OutSideItem = [
         {
             name:"google",
-            img:"/image/icons/ic_google.png"
+            img:`${import.meta.env.BASE_URL}image/icons/ic_google.png`
         },
         {
             name:"facebook",
-            img:"/image/icons/ic_facebook.png"
+            img:`${import.meta.env.BASE_URL}image/icons/ic_facebook.png`
         },
         {
             name:"apple",
-            img:"/image/icons/ic_apple.png"
+            img:`${import.meta.env.BASE_URL}image/icons/ic_apple.png`
         },
     ]
     return(
         <>
             <div className='Login-desk d-flex p-lg-40'>
                 <div className='Login-desk-left d-none d-lg-flex'>
-                    <img className='img-set my-auto' src="/image/login.png" alt="" />
+                    <img className='img-set my-auto' src={`${import.meta.env.BASE_URL}image/login.png`} alt="" />
                 </div>
                 <div className="Login-desk-right">
                     <div className="Login-box py-60 px-24 py-lg-111 mx-lg-auto my-lg-auto">
@@ -92,7 +92,8 @@ function LoginPage (){
                             </div>
                             <div className='d-flex flex-column mt-16 gap-8 position-relative'>
                                 <label htmlFor="password" className='fw-400 fs-16 lh-15 col-4b4b4b poppins'>密碼<span className='text-danger'>*</span></label>
-                                <input className='p-16 fw-400 fs-16 lh-15 col-000000 poppins' type={showPassword ? 'text' : 'password'} id="password" name="password"        placeholder="請輸入密碼" autoComplete="current-password" required 
+                                <input className='p-16 fw-400 fs-16 lh-15 col-000000 poppins' type={showPassword ? 'text' : 'password'} id="password" name="password"        
+                                placeholder="請輸入密碼" autoComplete="current-password" required 
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 />
@@ -104,7 +105,7 @@ function LoginPage (){
                                 )}
                                 {password && (
                                     <button type="button" className="eye-btn" onClick={() => setShowPassword(!showPassword)}>
-                                        <img    src={showPassword ? '/image/icons/ic_eye_close.png' : '/image/icons/ic_eye-open.png'}
+                                        <img    src={showPassword ? `${import.meta.env.BASE_URL}image/icons/ic_eye_close.png` : `${import.meta.env.BASE_URL}image/icons/ic_eye-open.png`}
                                                 alt={showPassword ? '隱藏密碼' : '顯示密碼'}
                                                 className="eye-icon"
                                         />

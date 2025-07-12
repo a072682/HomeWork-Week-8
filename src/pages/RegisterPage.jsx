@@ -42,22 +42,22 @@ function RegisterPage (){
     const OutSideItem = [
         {
             name:"google",
-            img:"/image/icons/ic_google.png"
+            img:`${import.meta.env.BASE_URL}image/icons/ic_google.png`
         },
         {
             name:"facebook",
-            img:"/image/icons/ic_facebook.png"
+            img:`${import.meta.env.BASE_URL}image/icons/ic_facebook.png`
         },
         {
             name:"apple",
-            img:"/image/icons/ic_apple.png"
+            img:`${import.meta.env.BASE_URL}image/icons/ic_apple.png`
         },
     ]
     return(
         <>  
             <div className='Register-desk d-flex p-lg-40'>
                 <div className='Register-desk-left d-none d-lg-flex'>
-                    <img className='img-set my-auto' src="/image/login.png" alt="" />
+                    <img className='img-set my-auto' src={`${import.meta.env.BASE_URL}image/login.png`} alt="" />
                 </div>
                 <div className="Register-desk-right">
                     <div className="Register-box py-60 px-24 py-lg-111 mx-lg-auto my-lg-auto">
@@ -97,7 +97,7 @@ function RegisterPage (){
                                 />
                                 {password && (
                                     <button type="button" className="eye-btn" onClick={() => setShowPassword(!showPassword)}>
-                                        <img    src={showPassword ? '/image/icons/ic_eye_close.png' : '/image/icons/ic_eye-open.png'}
+                                        <img    src={showPassword ? `${import.meta.env.BASE_URL}image/icons/ic_eye_close.png` : `${import.meta.env.BASE_URL}image/icons/ic_eye-open.png`}
                                                 alt={showPassword ? '隱藏密碼' : '顯示密碼'}
                                                 className="eye-icon"
                                         />
@@ -118,7 +118,7 @@ function RegisterPage (){
                                 )}
                                 {password02 && (
                                     <button type="button" className="eye-btn" onClick={() => setShowPassword02(!showPassword02)}>
-                                        <img    src={showPassword02 ? '/image/icons/ic_eye_close.png' : '/image/icons/ic_eye-open.png'}
+                                        <img    src={showPassword02 ? `${import.meta.env.BASE_URL}image/icons/ic_eye_close.png` : `${import.meta.env.BASE_URL}image/icons/ic_eye-open.png`}
                                                 alt={showPassword02 ? '隱藏密碼' : '顯示密碼'}
                                                 className="eye-icon"
                                         />

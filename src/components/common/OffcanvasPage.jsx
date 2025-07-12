@@ -170,7 +170,7 @@ function OffcanvasPage({ expanded, onClose, isLoggedIn, handleLogout, setExpande
                                                         <div className="member-header pb-15">
                                                             <div className='d-flex'>
                                                                 <div className='member-img-box'>
-                                                                    <img className='img-set' src="/image/avatar-1.png" alt="" />
+                                                                    <img className='img-set' src={`${import.meta.env.BASE_URL}image/avatar-1.png`} alt="" />
                                                                 </div>
                                                                 <div>
                                                                     <p className='fw-600 fs-16 lh-15 col-000000 poppins'>Jessica</p>

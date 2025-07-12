@@ -11,7 +11,7 @@ function Footer(){
                     <div className="footer-bg">
                         <div className="d-flex flex-column flex-xl-row justify-content-xl-between">
                             <div className="footer-img-box">
-                                <img className="img-set" src="/image/logo-white.png" alt="" />
+                                <img className="img-set" src={`${import.meta.env.BASE_URL}image/logo-white.png`} alt="" />
                             </div>
                             <div className="footer-link-box d-flex flex-column gap-24 mt-40 flex-xl-row gap-xl-32 mt-xl-0 align-items-xl-end">
                                 <a href="#">
@@ -31,13 +31,13 @@ function Footer(){
                         <div className="mt-xl-16 d-flex flex-column flex-xl-row-reverse justify-content-xl-between">
                             <div className="footer-icon-box d-flex gap-16 mt-40 mt-xl-0">
                                 <a href="#" className="footer-icon">
-                                    <img className="line" src="/image/icons/line.png" alt="" />
+                                    <img className="line" src={`${import.meta.env.BASE_URL}image/icons/line.png`} alt="" />
                                 </a>
                                 <a href="#" className="footer-icon">
-                                    <img className="youtube" src="/image/icons/youtube.png" alt="" />
+                                    <img className="youtube" src={`${import.meta.env.BASE_URL}image/icons/youtube.png`} alt="" />
                                 </a>
                                 <a href="#" className="footer-icon">
-                                    <img className="facebook" src="/image/icons/facebook.png" alt="" />
+                                    <img className="facebook" src={`${import.meta.env.BASE_URL}image/icons/facebook.png`} alt="" />
                                 </a>
                             </div>
                             <div className="footer-end mt-32 mt-xl-0 d-xl-flex align-items-xl-end">

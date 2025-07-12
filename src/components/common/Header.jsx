@@ -116,7 +116,7 @@ function Header() {
         <div className='navbar-box d-flex align-items-center'>
             {/* 左上角 Logo */}
             <Link to="/" className='navbar-logo-box me-lg-24'>
-                <img className='img-set' src="/image/logo.png" alt="logo" />
+                <img className='img-set' src={`${import.meta.env.BASE_URL}image/logo.png`} alt="logo" />
             </Link>
             
 

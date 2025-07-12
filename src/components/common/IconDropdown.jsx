@@ -20,25 +20,25 @@ function IconDropdown() {
   const messages = [
     {
         id:1,
-        icon:"/image/icons/ic_campaign02.png",
+        icon:`${import.meta.env.BASE_URL}/image/icons/ic_campaign02.png`,
         message:"系統通知：6 月 30 日 02:00 網站系統排程更新",
         time:"4天前",
     },
     {
         id:2,
-        icon:"/image/icons/ic_notifications02.png",
+        icon:`${import.meta.env.BASE_URL}image/icons/ic_notifications02.png`,
         message:"募資開課：您購買的募資課程已成功開課！將於 3 天後公布課綱！",
         time:"7 天前",
     },
     {
         id:3,
-        icon:"/image/icons/ic_notifications02.png",
+        icon:`${import.meta.env.BASE_URL}image/icons/ic_notifications02.png`,
         message:"募資開課：您購買的募資課程已成功開課！將於 3 天後公布課綱！",
         time:"7 天前",
     },
     {
         id:4,
-        icon:"/image/icons/ic_campaign02.png",
+        icon:`${import.meta.env.BASE_URL}image/icons/ic_campaign02.png`,
         message:"系統通知：6 月 30 日 02:00 網站系統排程更新",
         time:"4天前",
     },
@@ -76,7 +76,7 @@ function IconDropdown() {
                             return(
                                 <>
                                     <div key={item.id} className='main-item'>
-                                        <div className={`main-img-container ${item.icon === "/image/icons/ic_notifications02.png" ?("plus"):(null)}`}>
+                                        <div className={`main-img-container ${item.icon === `${import.meta.env.BASE_URL}image/icons/ic_notifications02.png` ?("plus"):(null)}`}>
                                             <img className='main-img' src={item.icon} alt="" />
                                         </div>
                                         <div className='main-text-container'>
