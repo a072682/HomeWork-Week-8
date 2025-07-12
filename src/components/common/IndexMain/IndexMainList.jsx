@@ -45,10 +45,10 @@ function IndexMainList ({allData}){
                     <div className="col">
                         <div className='IndexMainList-mb py-40 py-lg-120'>
                             <div className="IndexMainList-mb-title">
-                                <img className="IndexMainList-mb-deco" src="/image/deco/polygon-1.png" alt="" />
+                                <img className="IndexMainList-mb-deco" src={`${import.meta.env.BASE_URL}image/deco/polygon-1.png`} alt="" />
                                 <h2 className='d-block d-lg-none'>想學什麼嗎？</h2>
                                 <h2 className='d-block d-lg-none'>一探究竟。</h2> 
-                                <img className="IndexMainList-mb-deco2" src="/image/deco/line-2.png" alt="" />
+                                <img className="IndexMainList-mb-deco2" src={`${import.meta.env.BASE_URL}image/deco/line-2.png`} alt="" />
                             </div>
                             <div className='IndexMainList-content mt-40'>
                                 <Swiper
@@ -72,7 +72,7 @@ function IndexMainList ({allData}){
                                                         <div className={`MainList-card-img-box ${group.bg}`}>
                                                             <img
                                                             className="MainList-card-img"
-                                                            src={`/image/icons/${group.icon}.png`}
+                                                            src={`${import.meta.env.BASE_URL}image/icons/${group.icon}.png`}
                                                             alt=""
                                                             />
                                                         </div>
@@ -108,7 +108,7 @@ function IndexMainList ({allData}){
                                                         <Fragment key={index}>
                                                             <button className="MainList-card border-0" onClick={()=>{handleGoToCoursePage02(allData,item.id,navigate)}}>
                                                                 <div className={`MainList-card-img-box ${item.bg}`}>
-                                                                    <img className="MainList-card-img" src={`/image/icons/${item.icon}.png`} alt="" />
+                                                                    <img className="MainList-card-img" src={`${import.meta.env.BASE_URL}image/icons/${item.icon}.png`} alt="" />
                                                                 </div>
                                                                 <div className="MainList-card-text">
                                                                     <h6>{item.label}</h6>
@@ -127,11 +127,11 @@ function IndexMainList ({allData}){
                                 <div className="row h-100">
                                     <div className="col-8 h-100 mx-auto d-flex">
                                         <div className="IndexMainList-dk-title my-auto">
-                                            <img className="IndexMainList-dk-deco" src="/image/deco/polygon-1.png" alt="" />
+                                            <img className="IndexMainList-dk-deco" src={`${import.meta.env.BASE_URL}image/deco/polygon-1.png`} alt="" />
                                             <div className='w-100'>
                                                 <h2 className='d-none d-lg-block'>想學什麼嗎？</h2>
                                                 <h2 className='d-none d-lg-block'>一探究竟。</h2> 
-                                                <img className="IndexMainList-dk-deco2" src="/image/deco/line-2.png" alt="" />
+                                                <img className="IndexMainList-dk-deco2" src={`${import.meta.env.BASE_URL}image/deco/line-2.png`} alt="" />
                                             </div>
                                             
                                         </div>
