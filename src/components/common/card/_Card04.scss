@@ -1,0 +1,137 @@
+    .card04{
+        
+        .card04-bg{
+            position:relative;
+            border-radius: 20px;
+            background-color: transparent;
+            margin: 0px 8px 8px 8px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            background-color: #ffffff;
+            .card04-img-box{
+                
+                .card04-img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    @media (max-width: 992px) { 
+                        width: 100%;
+                     }
+                }
+            }
+            .card04-time{
+                position: absolute;
+                background-color: #ffe0d7;
+                border-radius: 100px;
+                top: 16px;
+                left:16px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1.5;
+                color: #0068ff;
+                font-family: 'Poppins', sans-serif;//英文字體
+                padding: 8px 12px;
+                
+            }
+            .card04-body{
+                
+                padding: 24px 16px;
+
+                
+                .card04-title{
+                    min-height: 48px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 1.5;
+                    font-family: 'Poppins', sans-serif;//英文字體;
+                    color: #000000;
+                    min-height: 60px;
+                }
+                .card04-content{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 16px;
+                   
+                    .card04-user{
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 8px;
+                        .user-img{
+                            width: 44px;
+                            height: 44px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            object-position: 0% 10%;
+                            top:20px;
+                            
+                        }
+                        p{
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: #4b4b4b;
+                            font-family: 'Noto Sans TC', sans-serif;
+                        }
+                    }
+                    .card04-text{
+                        div{
+                            font-weight: 700;
+                            font-size: 20px;
+                            color: #0068ff;
+                            font-family: 'Noto Sans TC', sans-serif;
+                            
+                        }
+                        .text-end{
+                            del{
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: #4b4b4b;
+                                font-family: 'Noto Sans TC', sans-serif;
+                                
+                            }
+                        }
+                    }
+                }
+                .card04-content02{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 32px;
+                    
+                    .card04-text02{
+                        .text01{
+                            width: fit-content;
+                            border-radius: 100px;
+                            background-color: #ececec;
+                            color: #4b4b4b;
+                            font-weight: 400;
+                            font-size: 14px;
+                            padding: 4px 12px 4px 12px;
+                        }
+                        .text02{
+                            max-width: 130px;
+                            min-height: 45px;
+                            font-weight: 400;
+                            font-size: 14px;
+                            color: #4b4b4b;  
+                        }
+                    }
+                    .card04-evaluate{
+                        display: flex ;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-weight: 500;
+                            font-size: 14px;
+                            color: #180000;
+                            span{
+                                font-size: 14px;
+                                color: #808080;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

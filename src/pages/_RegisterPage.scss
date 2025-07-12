@@ -1,0 +1,42 @@
+.Register-desk{
+    width: 100%;
+    .Register-desk-left{
+        flex: 1 1 40%;
+    }
+    .Register-desk-right{
+        flex: 1 1 60%;
+
+        .Register-box{
+            width: 100%;
+            min-height: 100vh;
+            @media (min-width: 992px) { 
+                max-width: 540px;
+                max-height: 778px;
+            }
+            
+        }
+    }
+}
+
+.eye-btn {
+  position: absolute;
+  top: 52px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.eye-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+
+.eye-icon:hover {
+  opacity: 1;
+}
+

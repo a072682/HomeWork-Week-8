@@ -1,0 +1,106 @@
+/* 客製化整體手風琴 */
+.custom-ReactAccordion {
+    /*整體元件樣式*/
+    /*最外圍*/
+    width:100%;
+    height: fit-content;
+
+    /* 客製化單一 Accordion 項目 */
+    .custom-ReactAccordionItem {
+      border: none; /* 移除原本邊框 */
+      margin-top: 16px;
+        /* 客製化標題 */
+        .custom-ReactAccordionHeader{
+          /*custom-ReactAccordionHeader之下的accordion-button*/
+
+          .accordion-button{
+            /*客製化樣式文字要能套用此樣式*/
+            border-radius: 12px;
+            background-color: #ececec; /* 背景 */
+            padding: 24px;
+            box-shadow: none ; /* ✅ 移除點擊時的藍色外框陰影 */
+            outline: none ; /* ✅ 移除可能的 outline */
+
+            &:not(.collapsed){
+              /*展開時本體的設定*/
+              
+            }
+
+            .title{
+              display: flex;
+              gap: 8px;
+              .numbox{
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #4b4b4b;
+                color: #ffffff;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1.5;
+                font-family: 'Poppins', sans-serif;//英文字體
+                border-radius: 4px;
+              }
+              p{
+                max-width: 230px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.5;
+                font-family: 'Poppins', sans-serif;//英文字體
+                color: #000000;
+              }
+            }
+          }
+        }
+
+        /* 客製化內容 */
+        .custom-ReactAccordionBody {
+          /*展開後的主體設定*/
+          box-shadow: none ; /* ✅ 移除點擊時的藍色外框陰影 */
+          outline: none ; /* ✅ 移除可能的 outline */
+          box-shadow: none; /* 本底底部白色邊緣 */
+          padding: 16px 0;
+          .body{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            .body-box{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 16px 24px;
+                .content01{
+                  display: flex;
+                  justify-content: start;
+                  align-items: center;
+                  gap: 12px;
+                }
+                .content02{
+                  display: flex;
+                  justify-content: start;
+                  align-items: center;
+                  gap:16px;
+                  button{
+                    border: none;
+                    padding:4px 8px;
+                    border-radius: 8px;
+                    background-color: #0068ff;
+                    color: #ffffff;
+                  }
+                }
+            }
+          }
+        }
+    }
+  }
+  
+
+  
+
+  
+  
+
+  

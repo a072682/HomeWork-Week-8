@@ -1,0 +1,54 @@
+.dropdown{
+    
+    .icon-dropdown-toggle{
+        position: relative;
+        &::after{
+        display: none;//預設小箭頭消失
+        }
+        .icon-title-btn{
+            border: none;
+            padding: 0;
+            .notifications-icon{
+                
+            }
+        }
+    }
+    .dropdown-list-wrapper{
+
+        .icondropdown-list{
+            position: absolute;
+            top: 8px;
+            left:22px;
+            display: flex;
+            flex-direction: column;
+            padding: 24px 12px;
+            min-width: 240px;
+            .icon-header{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 16px;
+                .icon-img-container{
+                    width: 44px;
+                    height: 44px;
+                    .icpn-img{
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+                .icon-text-container{
+
+                }
+            }
+            .member-body{
+                border-bottom: 1px solid #ececec;
+                .member-icon{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}

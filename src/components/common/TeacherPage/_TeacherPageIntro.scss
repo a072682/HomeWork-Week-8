@@ -1,0 +1,136 @@
+.TeacherPageIntro{
+    width: 100%;
+    height: fit-content;;
+    background-image: url('/image/hero-sm-5.png'); 
+    background-size: auto;      
+    background-position: top center;
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 992px) { 
+        background-image: url('/image/hero-5.png');
+    }
+    .TeacherPageIntro-bg{
+        margin-top: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: 992px) { 
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+            margin-top: 320px;
+            gap: 80px;
+        }
+        .Intro-img-box{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // margin: 0 auto;
+            @media (min-width: 992px) { 
+                width: 240px;
+                height: 240px;
+                flex-shrink: 0;
+            }
+            .Intro-img{
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 50%;
+                @media (min-width: 992px) { 
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+        .content-container{
+            height: fit-content;
+            @media (min-width: 992px) { 
+                height: 426px;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: start;
+                gap: 24px;
+            }
+            h2{
+                font-weight:600;
+                font-size: 32px;
+                text-align: center;
+                @media (min-width: 992px) { 
+                    font-size: 48px;
+                }
+            }
+            .score-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                @media (min-width: 992px) { 
+                    gap: 24px;
+                }
+                p{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #0068ff;
+                    @media (min-width: 992px) { 
+                        font-size: 20px;
+                    }
+                    span{
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #4b4b4b;
+                        @media (min-width: 992px) { 
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .mid{
+                    padding: 0px 12px;
+                    border-left: 2px solid #909090;
+                    border-right: 2px solid #909090;
+                    @media (min-width: 992px) { 
+                        padding: 0px 24px;
+                    }
+                }
+            }
+            .text{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.5;
+                @media (min-width: 992px) { 
+                    font-size: 16px;
+                }
+            }
+            .icon-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                button{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid #4b4b4b;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                img{
+                    width: 24px;
+                    height: auto;
+                    
+                }
+            }
+        }
+    }
+    
+}

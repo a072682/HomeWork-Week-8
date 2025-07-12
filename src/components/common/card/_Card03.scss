@@ -1,0 +1,86 @@
+
+.card03{
+    .card03-bg{
+        position: relative;
+        width: 416px;
+        height: 605px;
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        margin: 0px auto;
+        
+        .card03-user-img{
+            position: absolute;
+            width: 327px;
+            height: auto;
+            border-radius: 20px;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .card03-body{
+            width: 327px;
+            height:fit-content;
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            margin-top: auto;
+            .card03-title{
+                font-weight: 600;
+                font-size: 20px;
+                font-family: 'Poppins', sans-serif;
+                
+            }
+            .card03-category{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap:8px;
+                margin-top: 24px;
+                .tag{
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    background-color: #ececec;
+                    color: #4b4b4b;
+                    border-radius: 100px;
+                    padding:8px 12px;
+                }
+                .score{
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    font-family: 'Poppins', sans-serif;
+                    span{
+                        color: #808080;
+                    }
+                }
+            }
+            .card03-content{
+                margin-top: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.5;
+                color: #4b4b4b;
+                .card03-text{
+                    min-height: 105px;
+                }
+            }
+            .card03-btn{
+                margin-top: 24px;
+                width: 100%;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.5;
+                font-family: 'Poppins', sans-serif;
+                color: #ffffff;
+                text-align: center;
+                padding:16px 0;
+                border-radius: 12px;
+                background-color: #0068ff;
+                border: none;
+            }
+        }
+    }
+}

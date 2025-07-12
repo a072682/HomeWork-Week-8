@@ -1,0 +1,118 @@
+.Order03{
+
+    .Order03-bg{
+
+        .Order03-intro{
+            margin: 40px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            @media (min-width: 992px) { 
+                margin: 80px 0;
+            }
+            .hrader-container{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 16px;
+                @media (min-width: 992px) { 
+                    justify-content: center;
+                    gap: 40px;
+                }
+                .icon-container{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    background-color: #7cd31f;
+                    @media (min-width: 992px) { 
+                        width: 56px;
+                        height: 56px;
+                    }
+                    .check-icon{
+                        color: #ffffff;
+                        font-size: 24px;
+                        @media (min-width: 992px) { 
+                            font-size: 40px;
+                        }
+                    }
+                }
+                .text-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                    gap: 8px;
+                    font-weight: 600;
+                    font-size: 32px;
+                    line-height: 1.2;
+                    @media (min-width: 992px) { 
+                        font-size: 48px;
+                    }
+                }
+            }
+            .intro-text{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.5;
+                color: #4b4b4b;
+                @media (min-width: 992px) { 
+                    text-align: center;
+                    font-size: 16px;
+                }
+            }
+            .Order03-btn-container{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                @media (min-width: 992px) { 
+                    justify-content: center;
+                }
+                .Order03-btn01,.Order03-btn02{
+                    width: 100%;
+                    padding: 16px 0;
+                    border-radius: 12px;
+                    border: 1px solid #0068ff;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    background-color: #ffffff;
+                    color: #0068ff;
+                    @media (min-width: 992px) { 
+                        max-width: 256px;
+                        
+                    }
+
+                    &.active,
+                    &:hover {
+                        background-color: #0068ff;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+
+        .Order03-class{
+            margin: 80px 0;
+            @media (min-width: 992px) { 
+                margin: 100px 0 200px 0;
+            }
+            .Order03-title-box{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 6px;
+                .Order03-title-text{
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 1.2;
+                }
+            }
+            .content-container{
+                margin-top: 24px;
+            }
+        }
+    }
+}

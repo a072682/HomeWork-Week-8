@@ -1,0 +1,79 @@
+.IndexMainTopChoices-mb{
+
+    overflow: visible;
+
+    .IndexMainTopChoices-mb-deco{
+        top:80px;
+        left: 5px;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+        @media (min-width: 992px) { 
+            top:120px;
+            left: 290px;
+        }
+        @media (min-width: 1200px) { 
+            top:120px;
+            left: 380px;
+        }
+        @media (min-width: 1400px) { 
+            top:120px;
+            left: 470px;
+        }
+        
+    }
+    .IndexMainTopChoices-content{
+
+        .IndexMainTopChoices-title{
+            h2{
+                font-weight: 700;
+                font-size: 48;
+                font-family: 'Poppins', sans-serif;//英文字體;
+                @media (min-width: 992px) { 
+                    text-align: center;
+                }
+                
+            }
+            p{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1.5;
+                color: #4b4b4b;
+                font-family: 'Noto Sans TC', sans-serif;//繁體中文無襯線字體
+                @media (min-width: 992px) { 
+                    text-align: center;
+                }
+                
+            }
+        }
+        .IndexMainTopChoices-cardgroups{
+
+            .TopChoices-card-btn{       
+                .swiper-button02-prev,
+                .swiper-button02-next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 56px;
+                    height: 56px;
+                    background-color: #ffffff;
+                    color:#0068ff ;
+                    border-radius: 12px;
+                    z-index: 10;
+                    &:hover{
+                        background-color: #0068ff;
+                        color:#ffffff ;
+                    }
+                }
+
+                .swiper-button02-prev {
+                    left: -30px;
+                }
+
+                .swiper-button02-next {
+                    right: -30px;
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,141 @@
+/* 背景遮罩 */
+.offcanvas-backdrop.offcanvas-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+/* 左側滑出面板 */
+.offcanvas-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  
+  animation: slideIn 0.3s ease;
+}
+
+/* 動畫 */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Offcanvas 內部樣式調整（建議追加） */
+.offcanvas-box {
+  height: 100vh; // 或 min-height: 100vh
+}
+
+
+.offcanvas-btn {
+  background-color: #ffffff;
+  color: #4b4b4b;
+  border-radius: 15px;
+  padding: 12px 24px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+
+  &.active {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: 600;
+  }
+}
+
+
+.offcanvas-bottom{
+
+    .login-btn {
+      text-align: center;
+        width: 100%;
+        background-color: #0068ff;
+        color: white;
+        border-radius: 12px;
+        padding: 16px 32px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: 'Poppins', sans-serif;
+        border: none;
+    }
+}
+
+/*tab*/
+.tab-box{
+  width: 100%;
+  .tab-item{
+    width: 50%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tab-link{
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;//英文字體
+      color: #909090;
+      padding: 16px 0 16px 0;
+      position: relative; 
+      &.active{
+        color: #0068ff;
+        
+        &::after{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          border-radius: 10px;
+          background-color: #0068ff;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    
+    }
+  }
+}
+
+/*tab-pane*/
+.tab-pane{
+  &.active{
+    height: 100%;
+    .member-box{
+      height: calc(100% - 56px);
+      .member-header{
+        border-bottom: 1px solid #ececec;
+        .member-img-box{
+          width: 44px;
+          height: 44px;
+        }
+      }
+      .member-body{
+        border-bottom: 1px solid #ececec;
+        .member-icon{
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  
+}
+
+
+
+
+
+

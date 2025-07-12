@@ -1,0 +1,142 @@
+.IndexMainHotCourses-mb-deco{
+    width: 200px;
+    height: 200px;
+    top:50px;
+    left: -15px;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+
+.IndexMainHotCourses-tab{
+    width: 100%;
+    height: 72px;
+
+    .swiper-slide{
+        
+        .HotCourses-tab-item{
+            color: #333333;
+            width: fit-content;
+            background-color: #ececec;
+            border-radius: 12px;
+            &.active{
+                color: #ffffff;
+                background-color: #0068ff;
+            }
+        }
+    }
+}
+
+.IndexMainHotCourses-cardgroups{
+
+    .HotCourses-pagination{
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 20;
+
+        @media (min-width: 992px) { 
+            display: none;
+        }
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 100px;
+            background-color: #bbb;
+            opacity: 1;
+            cursor: pointer;
+        }
+        .swiper-pagination-bullet-active {
+            width: 24px;
+            background-color: #007bff;
+        }
+    }  
+}
+    .HotCourses-btn{
+        border-radius: 12px;
+    }
+
+
+
+    /*dk*/
+    .IndexMainHotCourses-dk{
+        width: 100%;
+        height: fit-content;
+
+        .IndexMainHotCourses-dk-deco{
+            top:160px;
+            left: -140px;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+        }
+        
+        .HotCourses-dk-text{
+
+            .HotCourses-dk-item{
+
+                button{
+                    color: #333333;
+                    width: fit-content;
+                    background-color: #ececec;
+                    border-radius: 12px;
+                    &.active{
+                        color: #ffffff;
+                        background-color: #0068ff;
+                    }
+                }
+            }
+            .HotCourses-dk-btn{
+                width: fit-content;
+                border-radius:12px;
+            }
+        }
+    }
+
+    .HotCourses-dk-card-box{
+
+        .HotCourses-card{
+            border-radius: 20px;
+            overflow: hidden;
+            .HotCourses-card-time{
+                border-radius: 100px;
+                top: 16px;
+                left:16px;
+            }
+            .card-body{
+                
+                
+                .card-title{}
+                .card-user{
+
+                    .user-img{
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        object-position: 0% 10%;
+                        top:20px;
+                    }
+                }
+                .card-content{
+                    .text01{
+
+                    }
+
+                    .progress{
+
+                        height: 8px;          /* 改高度 */
+                        border-radius: 100px;     /* 圓角 */
+                        overflow: hidden;       /* 裁切圓角用 */
+
+                        .progress-bar{
+                            
+                            background-color: #0068ff; /* 進度條顏色 */
+                        }
+                    }
+                }
+            }
+        }
+    }

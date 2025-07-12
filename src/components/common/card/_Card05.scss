@@ -1,0 +1,127 @@
+    .card05{
+
+        .card05-bg{
+            position:relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin: 8px 0;
+            display: flex;
+            gap:8px;
+            .card05-img-box{
+                flex: 1 1 30%;
+                .card05-img{
+                    height: auto;
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    border-radius: 12px;
+                }
+            }
+            .card05-time{
+                position: absolute;
+                background-color: #ffe0d7;
+                border-radius: 100px;
+                top: 4px;
+                left:4px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.5;
+                color: #ff3a55;
+                font-family: 'Poppins', sans-serif;//英文字體
+                padding: 8px 12px;
+            }
+            .card05-body{
+                flex: 1 1 70%;
+                width: 100%;
+                padding:0px;
+                .card05-title{
+                    min-height: 48px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    font-family: 'Poppins', sans-serif;//英文字體;
+                    color: #000000;
+                }
+                .card05-content{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 8px;
+                    .card05-user{
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 8px;
+                        .user-img{
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            object-position: 0% 10%;
+                            top:20px;
+                        }
+                        p{
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: #4b4b4b;
+                            font-family: 'Noto Sans TC', sans-serif;
+                        }
+                    }
+                    .card05-text{
+                        div{
+                            font-weight: 700;
+                            font-size: 16px;
+                            color: #0068ff;
+                            font-family: 'Noto Sans TC', sans-serif;
+                        }
+                        .text-end{
+                            del{
+                                font-weight: 400;
+                                font-size: 12px;
+                                color: #4b4b4b;
+                                font-family: 'Noto Sans TC', sans-serif;
+                            }
+                        }
+                    }
+                }
+                .card05-content02{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 0px;
+                    padding: 8px 0px;
+                    .card05-text02{
+                        .text01{
+                            width: fit-content;
+                            border-radius: 100px;
+                            background-color: #ececec;
+                            color: #4b4b4b;
+                            font-weight: 400;
+                            font-size: 14px;
+                            padding: 4px 12px 4px 12px;
+                        }
+                        .text02{
+                            font-weight: 400;
+                            font-size: 14px;
+                            color: #4b4b4b;  
+                        }
+                    }
+                    .card05-evaluate{
+                        display: flex ;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-weight: 500;
+                            font-size: 14px;
+                            color: #180000;
+                            span{
+                                font-size: 14px;
+                                color: #808080;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

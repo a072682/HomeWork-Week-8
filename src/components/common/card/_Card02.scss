@@ -1,0 +1,166 @@
+    .card02{
+
+        .card02-bg{
+            position:relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin: 8px 0;
+            @media (max-width: 992px) { 
+                display: flex;
+                gap:8px;
+            }
+            .card02-img-box{
+                
+                @media (max-width: 992px) { 
+                    flex: 1 1 30%;
+                }
+                .card02-img{
+                    max-width: 306px;
+                    height: auto;
+                    object-fit: cover;
+                    @media (max-width: 992px) { 
+                        width: 100%;
+                        aspect-ratio: 1 / 1;
+                        object-fit: cover;
+                        border-radius: 12px;
+                    }
+                }
+            }
+            .card02-time{
+                position: absolute;
+                background-color: #ffe0d7;
+                border-radius: 100px;
+                top: 16px;
+                left:16px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1.5;
+                color: #0068ff;
+                font-family: 'Poppins', sans-serif;//英文字體
+                padding: 8px 12px;
+                @media (max-width: 992px) { 
+                    top: 4px;
+                    left:4px;
+                    color: #ff3a55;
+                    font-weight: 400;
+                }
+            }
+            .card02-body{
+                
+                padding: 24px 16px;
+
+                @media (max-width: 992px) { 
+                    flex: 1 1 70%;
+                    width: 100%;
+                    padding:0px;
+                }
+                .card02-title{
+                    min-height: 60px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 1.5;
+                    font-family: 'Poppins', sans-serif;//英文字體;
+                    color: #000000;
+                    @media (max-width: 992px) { 
+                        font-size: 16px;
+                    }
+                }
+                .card02-content{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 16px;
+                    @media (max-width: 992px) { 
+                        margin-top: 8px;
+                    }
+                    .card02-user{
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 8px;
+                        .user-img{
+                            width: 44px;
+                            height: 44px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            object-position: 0% 10%;
+                            top:20px;
+                            @media (max-width: 992px) { 
+                                width: 32px;
+                                height: 32px;
+                            }
+                        }
+                        p{
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: #4b4b4b;
+                            font-family: 'Noto Sans TC', sans-serif;
+                        }
+                    }
+                    .card02-text{
+                        div{
+                            font-weight: 700;
+                            font-size: 20px;
+                            color: #0068ff;
+                            font-family: 'Noto Sans TC', sans-serif;
+                            @media (max-width: 992px) { 
+                                font-size: 16px;
+                            }
+                        }
+                        .text-end{
+                            del{
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: #4b4b4b;
+                                font-family: 'Noto Sans TC', sans-serif;
+                                @media (max-width: 992px) { 
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .card02-content02{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 32px;
+                    @media (max-width: 992px) { 
+                        margin-top: 0px;
+                        padding: 8px 0px;
+                    }
+                    .card02-text02{
+                        .text01{
+                            width: fit-content;
+                            border-radius: 100px;
+                            background-color: #ececec;
+                            color: #4b4b4b;
+                            font-weight: 400;
+                            font-size: 14px;
+                            padding: 4px 12px 4px 12px;
+                        }
+                        .text02{
+                            font-weight: 400;
+                            font-size: 14px;
+                            color: #4b4b4b;  
+                        }
+                    }
+                    .card02-evaluate{
+                        display: flex ;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-weight: 500;
+                            font-size: 14px;
+                            color: #180000;
+                            span{
+                                font-size: 14px;
+                                color: #808080;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

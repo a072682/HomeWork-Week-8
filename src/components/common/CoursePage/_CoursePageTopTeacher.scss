@@ -1,0 +1,76 @@
+.CoursePageTopTeacher{
+    width: 100%;
+    margin: 40px 0;
+    @media (min-width: 992px) { 
+        margin: 80px 0;
+    }
+    .CoursePageTopTeacher-bg{
+
+        .TopTeacher-title{
+            font-weight: 600;
+            font-size: 24px;
+            text-align: center;
+            @media (min-width: 992px) { 
+                font-size: 40px;
+            }
+        }
+        .TopTeacher-box{
+            margin-top: 40px;
+            width: 100%;
+            border: none;
+            padding: 0px 12px 24px 12px;
+            @media (min-width: 992px) { 
+                padding:0px;
+            }
+            .TopTeacher-img{
+                width: 100%;
+                height: auto;
+                // @media (min-width: 992px) { 
+                //     width: 306px;
+                // }
+                
+            }
+            .TopTeacher-content{
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap:4px;
+                h5{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #4b4b4b;
+                }
+            }
+            .TopTeacher-content2{
+                padding: 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .TopTeacher-num{
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #4b4b4b;
+                }
+                .TopTeacher-evaluate{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        span{
+                            color: #808080;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+

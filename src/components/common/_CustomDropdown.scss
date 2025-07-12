@@ -1,0 +1,144 @@
+
+
+.dropdown{
+  display: none;
+  @media (min-width: 992px) { 
+    display: block;
+  }
+  .custom-dropdown-toggle{
+    position: relative;
+    width: fit-content;
+    margin: 20px 24px;
+
+    &::after{
+      display: none;//預設小箭頭消失
+    }
+    .dropdown-toggle-btn {
+      // width: 100%;
+      border: none;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #4b4b4b;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .dropdown-list-wrapper.dropdown-menu{
+      margin: 0;
+      padding: 0;
+      border: none;
+
+      .back{
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+      }
+      //下拉列表區塊
+      .dropdown-list {
+        position: relative;
+        top: 24px;
+        left: 104px;
+        transform: translateX(-50%);
+        border: none;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        @media (max-width: 1200px) { 
+            left: -74px;
+        }
+        
+        .main-menu,.sub-menu,.leaf-menu{
+          min-width:240px;
+          height: 600px;
+          overflow-y: auto;
+          background-color: #ffffff;
+          padding: 12px;
+          z-index: 15;
+          /* Chrome/Edge/Safari */
+          &::-webkit-scrollbar {
+            width: 4px;
+          }
+          &::-webkit-scrollbar-track {
+            background: #ffffff;
+            border-radius: 20px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: #e1e1e1;
+            border-radius: 15px;
+          }
+          &::-webkit-scrollbar-thumb:hover {
+            background-color: #4b4b4b;
+          }
+          .main-btn-top,.sub-btn-top{
+            width: 100%;
+            padding: 12px 24px;
+            text-align: start;
+            border: none;
+            background-color: #ffffff;
+            margin-bottom: 8px;
+          }
+          .main-menu-item,.sub-btn{
+            padding: 12px 12px 12px 24px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            border: none;
+          }
+        }
+
+        .main-menu{
+          border-radius: 12px 0px 0px 12px;
+        }
+
+
+        .sub-menu{
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+
+        .leaf-menu{
+            border-radius: 0px 12px 12px 0px;
+            position: absolute;
+            top: 0;
+            left: 200%;
+            min-width: 400px;
+            padding: 12px 24px;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+            &::-webkit-scrollbar-track {
+              display: none;
+            }
+            &::-webkit-scrollbar-thumb {
+              display: none;
+            }
+            .leaf-top{
+              margin-bottom: 32px;
+            }
+            .leaf-btn{
+              border: none;
+              padding: 0;
+              margin: 0;
+            }
+        }
+      }
+  }
+}
+
+  
+  
+  
+  
+  
+  
+  
+  

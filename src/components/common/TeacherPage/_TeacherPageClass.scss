@@ -1,0 +1,30 @@
+.TeacherPageClass{
+
+    .TeacherPageClass-bg{
+
+        margin-top: 48px;
+        margin-bottom: 120px;
+        @media (min-width: 992px) { 
+            margin-top: 100px;
+            margin-bottom: 200px;
+        }
+        .Class-title-box{
+
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 6px;
+
+            p{
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 1.2;
+            }
+        }
+
+        .content-container{
+            margin-top: 24px;
+            padding: 0 12px;
+        }
+    }
+}

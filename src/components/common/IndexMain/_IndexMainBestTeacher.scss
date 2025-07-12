@@ -1,0 +1,88 @@
+.IndexMainBestTeacher-mb{
+    width: 100%;
+    .IndexMainBestTeacher-content{
+
+        .BestTeacher-title{
+
+            p{
+                text-align: start;
+                @media (min-width: 768px) { 
+                    text-align: center;
+                }
+            }
+
+            .IndexMainBestTeacher-mb-deco{
+                top:0px;
+                left: 5px;
+                transform: translate(-50%,-50%);
+                z-index: -1;
+                 @media (min-width: 768px) { 
+                   left: 210px;
+                }
+                @media (min-width: 992px) { 
+                   left: 330px;
+                }
+            }
+        }
+    }
+    
+}
+
+
+.BestTeacher-pagination{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 20;
+
+    @media (min-width: 1200px) { 
+        display: none;
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        border-radius: 100px;
+        background-color: #bbb;
+        opacity: 1;
+        cursor: pointer;
+    }
+    .swiper-pagination-bullet-active {
+        width: 24px;
+        background-color: #007bff;
+    }
+}
+
+/*dk*/
+.IndexMainBestTeacher-dk{
+
+    .BestTeacher-dk-title{
+
+        h2{
+            font-weight: 600;
+            font-size: 48px;
+            text-align: center;
+        }
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #4b4b4b;
+            text-align: center;
+            margin-top: 8px;
+        }
+        .IndexMainBestTeacher-dk-deco{
+            top: 0px;
+            left: 110px;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            @media (min-width: 1400px) { 
+                left: 150px;
+            }
+        }
+    }
+}
+

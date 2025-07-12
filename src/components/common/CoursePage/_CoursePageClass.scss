@@ -1,0 +1,51 @@
+.CoursePageClass{
+
+    margin: 80px 0;
+    @media (max-width: 991.98px) { 
+        margin: 40px 0 80px 0;
+    }
+    .CoursePageClass-bg{
+
+        .CoursePageClass-top{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            gap:none;
+            @media (max-width: 991.98px) { 
+                flex-direction: column;
+                gap:12px;
+            }
+            .class-title{
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 1.2;
+                @media (max-width: 991.98px) { 
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+                span{
+                    color: #0068ff;
+                }
+            }
+            .class-tabs{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .class-tab{
+                    font-weight: 400;
+                    font-size: 16px;
+                    padding: 4px 16px;
+                    color: #4b4b4b;
+                    border: none;
+
+                    &.active{
+                        color: #0068ff;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.dropdown{
+    
+    .icon-dropdown-toggle{
+        position: relative;
+        &::after{
+        display: none;//預設小箭頭消失
+        }
+        .icon-title-btn{
+            border: none;
+            padding: 0;
+            .notifications-icon{
+                
+            }
+        }
+    }
+    .dropdown-list-wrapper{
+        .icondropdown-list{
+            background-color: #ffffff;
+            border-radius: 12px 12px 12px 12px;
+            position: absolute;
+            top: 8px;
+            left: 24px;
+            transform: translateX(-50%);
+            .main-header{
+                width: 100%;
+                padding:12px 16px;
+                .header-btn{
+                    width: 100%;
+                    border: none;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    gap: 8px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    background-color: #ffffff;
+                    color: #0068ff;
+                    padding: 0;
+                    .small-icon{
+                        width: 18px;
+                        height: 18px;
+                        font-size: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: #0068ff;
+                        color: #ffffff;
+                    }
+                }
+            }
+            .main-menu{
+                height: 250px;
+                overflow-y: auto;
+                
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                &::-webkit-scrollbar-track {
+                    display: none;
+                }
+                &::-webkit-scrollbar-thumb {
+                    display: none;
+                }
+                .main-item{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 16px;
+                    padding: 12px 16px;
+                    .main-img-container{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background-color: #d4f9fe;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-shrink: 0;
+                        &.plus{
+                            background-color:#ffe0d7
+                        }
+                        .main-img{
+                            width: 24px;
+                            height: 24px;
+                            object-fit: cover;
+                        }
+                    
+                    }
+                    .main-text-container{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: start;
+                        gap: 8px;
+                        min-width: 240px;
+                        .main-tip{
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 1.5;
+                            color: #4b4b4b;
+                        }
+                        .main-time{
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 1.5;
+                            color: #909090;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,195 @@
+.ProfilePage{
+    .ProfilePage-bg{
+        .ProfilePage-intro{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 80px 0;
+            @media (max-width: 992px) { 
+                justify-content: center;
+                flex-direction: column;
+                gap:32px;
+                margin: 40px 0;
+            }
+            .hrader-container{
+                width: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 24px;
+                .name-tag-container{
+                    width: 100%;
+                    .name-container{
+                        gap: 8px;
+                        @media (max-width: 992px) { 
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            
+                        }
+                        .name-img{
+                            max-width: 80px;
+                            height: auto;
+                        }
+                        .name{
+                            font-weight: 600;
+                            font-size: 48px;
+                            line-height: 1.2;
+                            @media (max-width: 992px) { 
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                    
+                    .tag-container{   
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 8px;
+                        @media (max-width: 992px) {
+                            margin-top: 24px;
+                            justify-content: center;
+                        }
+                        .tag-item-container{
+                            border: none;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 8px;
+                            padding: 16px 32px;
+                            border-radius: 12px;
+                            background-color: #ffffff;
+                            @media (max-width: 992px) { 
+                                padding: 8px 12px;
+                            }
+
+                            &.active,
+                            &:hover {
+                                background-color: #e5f4ff;
+
+                                .tag-icon,.tag-text{
+                                    color: #0068ff;
+                                }
+                            }
+                            .tag-icon{
+                                font-variation-settings:
+                                    'FILL' 1,
+                                    'wght' 400,
+                                    'GRAD' 0,
+                                    'opsz' 24;
+                                font-size: 20px;
+                                color: #909090;
+                            }
+                            .tag-text{
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 1.5;
+                                color: #909090;
+                                @media (max-width: 992px) { 
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .my-class{
+                width: fit-content;
+                @media (max-width: 992px) { 
+                    width: 100%;
+                }
+                .class-itam-container{
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    gap: 40px;
+                    @media (max-width: 992px) { 
+                        justify-content: center;
+                        gap: 16px;
+                    }
+                    .class,.collect,.result{
+                        min-width: 65px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 4px;
+                        @media (max-width: 992px) { 
+                            padding: 0 25px;
+                        }
+                        .text{
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 1.5;
+                            color: #4b4b4b;
+                            @media (max-width: 992px) { 
+                                font-size: 14px;
+                            }
+                        }
+                        .num{
+                            font-weight: 600;
+                            font-size: 48px;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ProfilePage-class{
+            .content-container{
+                .class-tab-content{
+                    .class-nav{
+                        gap: 32px;
+                        @media (max-width: 992px) { 
+                            gap: 20px;
+                        }
+                        .class-nav-item{
+                            .nav-link{
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 1.5;
+                                color: #4b4b4b;
+                                padding: 16px 0;
+                                position: relative;
+
+                                &::after{
+                                    content: "";
+                                    display: none;
+                                }
+
+                                &.active{
+                                    font-weight: 600;
+                                    color: #0068ff;
+                                    &::after{
+                                        content: "";
+                                        display: block;
+                                        position: absolute;
+                                        transform: translateX(-50%);
+                                        bottom: 0;
+                                        left:50%;
+                                        width: 32px;
+                                        height: 4px;
+                                        background-color: #0068ff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .class-card-content{
+                        margin-top: 40px;
+                        .all{
+                            .class-cardgroups{
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-container{
+            margin-top: 24px;
+        }
+    }
+}

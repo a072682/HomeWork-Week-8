@@ -1,0 +1,37 @@
+.offcanvas-subpage {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: calc(100vh - 56px);
+  width: 100%;
+  background: #fff;
+  z-index: 1060; // 高於 offcanvas-panel
+  display: flex;
+  flex-direction: column;
+
+  .subpage-box{
+        .subpage-header {
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ececec;
+            font-weight: 600;
+        }
+
+        .subpage-body {
+            flex: 1;
+            overflow-y: auto;
+
+            .subpage-btn {
+                padding: 12px 24px;
+                background-color: #f5f5f5;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                border: none;
+                }
+        }
+  } 
+}
+
+.h-full{
+  height: 100vh;
+}

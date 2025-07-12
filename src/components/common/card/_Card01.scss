@@ -1,0 +1,49 @@
+.card01{  
+    .card01-bg{
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        .card-img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            @media (min-width: 992px) { 
+                max-width: 416px;
+            }
+        }
+        .card01-time{
+            position:absolute;
+            border-radius: 100px;
+            top: 16px;
+            left:16px;
+        }
+        .card01-body{
+            .card01-title{
+                min-height:48px;
+            }
+            .card01-user{
+                .user-img{
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    object-position: 0% 10%;
+                    top:20px;
+                }
+            }
+            .card01-content{
+                .text01{
+                }
+                .progress{
+                    height: 8px;          /* 改高度 */
+                    border-radius: 100px;     /* 圓角 */
+                    overflow: hidden;       /* 裁切圓角用 */
+                    .progress-bar{
+                        background-color: #0068ff; /* 進度條顏色 */
+                    }
+                }
+            }
+        }
+    }
+}
