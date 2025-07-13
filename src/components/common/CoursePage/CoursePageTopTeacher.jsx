@@ -60,7 +60,9 @@ function CoursePageTopTeacher ({coursePageAllData}){
                                                 <Fragment key={index}>
                                                     <div className="col-12 col-lg-3 mx-auto">
                                                         <button className="TopTeacher-box" onClick={()=>{handleGoToTeacherPage(allData,item.id,navigate);}}>
-                                                            <img className="TopTeacher-img" src={item.classData.teacher.teacherImg} alt="" />
+                                                            <div className="TopTeacher-img-box">
+                                                                <img className="TopTeacher-img" src={item.classData.teacher.teacherImg} alt="" />
+                                                            </div>
                                                             <div className="TopTeacher-content">
                                                                 <h5>{item.classData.teacher.teacherName}</h5>
                                                                 <p>{item.classData.teacher.teacherCaption}</p>

@@ -52,12 +52,18 @@
                     justify-content: space-between;
                     align-items: center;
                     margin-top: 16px;
-                   
+                    @media (max-width: 1400px) { 
+                        
+                    }
                     .card04-user{
                         display: flex;
                         justify-content: start;
                         align-items: center;
                         gap: 8px;
+                        @media (max-width: 1400px) { 
+                           flex-direction:column;
+                           width: 100px;
+                        }
                         .user-img{
                             width: 44px;
                             height: 44px;
@@ -65,13 +71,15 @@
                             object-fit: cover;
                             object-position: 0% 10%;
                             top:20px;
-                            
                         }
                         p{
                             font-weight: 400;
                             font-size: 16px;
                             color: #4b4b4b;
                             font-family: 'Noto Sans TC', sans-serif;
+                            @media (max-width: 1400px) { 
+                                min-height: 48px;
+                            }
                         }
                     }
                     .card04-text{
@@ -98,6 +106,9 @@
                     justify-content: space-between;
                     align-items: center;
                     margin-top: 32px;
+                    @media (max-width: 1400px) { 
+                        margin-top: 12px;
+                    }
                     
                     .card04-text02{
                         .text01{

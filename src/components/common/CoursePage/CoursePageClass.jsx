@@ -90,7 +90,6 @@ function CoursePageClass ({coursePageAllData}){
                                                                     <button type="button" className="border-0 p-0 w-100" onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
                                                                         <Card02 item={item}/>
                                                                     </button>
-                                                                    
                                                                 </div>
                                                             </Fragment>
                                                         )
@@ -105,7 +104,7 @@ function CoursePageClass ({coursePageAllData}){
                                                         return(
                                                             <Fragment key={index}>
                                                                 <div className="col-12 col-lg-3">
-                                                                    <button type="button" className="border-0 p-0 w-100" onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
+                                                                    <button type="button" className="border-0 px-12 w-100" onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
                                                                         <Card02 item={item}/>
                                                                     </button>
                                                                     
@@ -123,10 +122,9 @@ function CoursePageClass ({coursePageAllData}){
                                                         return(
                                                             <Fragment key={index}>
                                                                 <div className="col-12 col-lg-3">
-                                                                    <button type="button" className="border-0 p-0 w-100" onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
+                                                                    <button type="button" className="border-0 px-12 w-100" onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
                                                                         <Card02 item={item}/>
                                                                     </button>
-                                                                    
                                                                 </div>
                                                             </Fragment>
                                                         )

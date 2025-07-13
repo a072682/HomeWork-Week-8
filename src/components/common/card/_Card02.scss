@@ -1,29 +1,29 @@
     .card02{
-
+        margin: 8px;
+        padding: 8px 12px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
         .card02-bg{
             position:relative;
-            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            margin: 8px 0;
             @media (max-width: 992px) { 
                 display: flex;
                 gap:8px;
             }
             .card02-img-box{
-                
+                width: 100%;
                 @media (max-width: 992px) { 
                     flex: 1 1 30%;
                 }
                 .card02-img{
-                    max-width: 306px;
+                    max-width: 100%;
                     height: auto;
                     object-fit: cover;
+                    border-radius: 12px;
                     @media (max-width: 992px) { 
                         width: 100%;
                         aspect-ratio: 1 / 1;
-                        object-fit: cover;
-                        border-radius: 12px;
                     }
                 }
             }
@@ -48,7 +48,7 @@
             }
             .card02-body{
                 
-                padding: 24px 16px;
+                padding: 24px 8px;
 
                 @media (max-width: 992px) { 
                     flex: 1 1 70%;
@@ -56,12 +56,14 @@
                     padding:0px;
                 }
                 .card02-title{
-                    min-height: 60px;
                     font-weight: 600;
                     font-size: 20px;
                     line-height: 1.5;
                     font-family: 'Poppins', sans-serif;//英文字體;
                     color: #000000;
+                    @media (max-width: 1400px) { 
+                        min-height: 60px;
+                    }
                     @media (max-width: 992px) { 
                         font-size: 16px;
                     }
@@ -71,6 +73,15 @@
                     justify-content: space-between;
                     align-items: center;
                     margin-top: 16px;
+                    
+                    @media (max-width: 1400px) { 
+                        min-height: 85px;
+                        margin-top: 0px;
+                    }
+                    @media (max-width: 1200px) { 
+                        min-height: 100px;
+                        
+                    }
                     @media (max-width: 992px) { 
                         margin-top: 8px;
                     }
@@ -79,6 +90,13 @@
                         justify-content: start;
                         align-items: center;
                         gap: 8px;
+                        @media (min-width: 992px) { 
+                            flex-direction:column;
+                        }
+                        @media (min-width: 1200px) { 
+                            flex-direction:row;
+                        }
+                        
                         .user-img{
                             width: 44px;
                             height: 44px;

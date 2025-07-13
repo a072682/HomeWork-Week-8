@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import './_ClassPageIntro.scss';
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 
 
@@ -26,6 +27,16 @@ function ClassPageIntro ({classPageAllData,id_first,id_third}){
     }
 
     const[accordionAllTime,setAccordionAllTime] = useState(null);
+
+    const isLoggedIn = useSelector((state) => {//讀取中央資料
+        return(
+            state.auth.isLoggedIn
+        )
+    });
+
+    useEffect(()=>{
+        console.log("目前登入狀態:",isLoggedIn)
+    },[isLoggedIn]);
 
     useEffect(()=>{
         const result = handleTeacherClassAllTime(classPageAllData);
@@ -79,20 +90,42 @@ function ClassPageIntro ({classPageAllData,id_first,id_third}){
                                                 <p className='text'>{classPageAllData[0]?.classData?.content}</p>
                                                 <p className='people-num'>{classPageAllData[0]?.classData?.NumberOfPeople} 人<span>已註冊</span></p>
                                             </div>
-                                            <div className='Intro-btn'>
-                                                <button className='active' onClick={()=>{navigate("/LoginPage");}}>
-                                                    <span className="material-symbols-outlined bookmark-icon">
-                                                        bookmark
-                                                    </span>
-                                                    <p>收藏課程</p>
-                                                </button>
-                                                <button onClick={()=>{navigate("/LoginPage");}}>
-                                                    <span className="material-symbols-outlined share-icon">
-                                                        share
-                                                    </span>
-                                                    <p>分享課程</p>
-                                                </button>
-                                            </div>
+                                                {
+                                                    isLoggedIn?
+                                                    (
+                                                        <div className='Intro-btn'>
+                                                            <button className='active'>
+                                                                <span className="material-symbols-outlined bookmark-icon">
+                                                                    bookmark
+                                                                </span>
+                                                                <p>收藏課程</p>
+                                                            </button>
+                                                            <button>
+                                                                <span className="material-symbols-outlined share-icon">
+                                                                    share
+                                                                </span>
+                                                                <p>分享課程</p>
+                                                            </button>
+                                                        </div>
+                                                    )
+                                                    :
+                                                    (   
+                                                        <div className='Intro-btn'>
+                                                            <button className='active' onClick={()=>{navigate("/LoginPage");}}>
+                                                                <span className="material-symbols-outlined bookmark-icon">
+                                                                    bookmark
+                                                                </span>
+                                                                <p>收藏課程</p>
+                                                            </button>
+                                                            <button onClick={()=>{navigate("/LoginPage");}}>
+                                                                <span className="material-symbols-outlined share-icon">
+                                                                    share
+                                                                </span>
+                                                                <p>分享課程</p>
+                                                            </button>
+                                                        </div>
+                                                    )
+                                                }
                                         </div>
                                     </div>
                                 </div>   

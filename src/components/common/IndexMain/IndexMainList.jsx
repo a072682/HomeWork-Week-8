@@ -52,13 +52,13 @@ function IndexMainList ({allData}){
                             </div>
                             <div className='IndexMainList-content mt-40'>
                                 <Swiper
-                                    className='h-100'
+                                    className='h-100 w-100'
                                     modules={[EffectCoverflow]}
                                     slidesPerView={1}
                                     loop={true}
                                     spaceBetween={8}
                                     breakpoints={{
-                                        768: {
+                                        992: {
                                         slidesPerView: 2,
                                         }
                                     }}

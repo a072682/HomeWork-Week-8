@@ -22,64 +22,6 @@ function IndexMainTopChoices ({allData}){
 
     const w_topChoicesData = [...topChoicesData,...topChoicesData];
 
-    // const TopChoices = [
-    //     {
-    //         title:"小白也會！從零開始學習 Python 程式設計",
-    //         img:"/image/course-4.png",
-    //         user_img:"/image/user01.jpg",
-    //         name:"Kelly Hsu",
-    //         discount_state:true,
-    //         discount:"限時 8 折 🔥",
-    //         price:"2,480",
-    //         origin_price:"3,200",
-    //         NumberOfPeople:"420",
-    //         score:"4.0",
-    //         NumberOfPeople:"333",
-    //     },
-    //     {
-    //         title:"全面掌握 JavaScript 開發技術",
-    //         img:"/image/course-5.png",
-    //         user_img:"/image/user02.jpg",
-    //         name:"希姐帶你吃",
-    //         discount_state:true,
-    //         discount:"限時 8 折 🔥",
-    //         price:"1,680",
-    //         origin_price:"2,980",
-    //         NumberOfPeople:"1,397 ",
-    //         score:"4.0",
-    //         NumberOfPeople:"333",
-    //     },
-    //     {
-    //         title:"HTML & CSS 網頁設計基礎教程",
-    //         img:"/image/course-6.png",
-    //         user_img:"/image/user03.jpg",
-    //         name:"K.Dee",
-    //         discount_state:false,
-    //         discount:"限時 8 折 🔥",
-    //         price:"2,680",
-    //         origin_price:"3,200",
-    //         NumberOfPeople:"420",
-    //         score:"4.0",
-    //         NumberOfPeople:"333",
-    //     },
-    //     {
-    //         title:"更進一步！深入學習 Node.js 與後端開發",
-    //         img:"/image/course-7.png",
-    //         user_img:"/image/user04.jpg",
-    //         name:"Mikeeee",
-    //         discount_state:false,
-    //         discount:"限時 8 折 🔥",
-    //         price:"1,980",
-    //         origin_price:"3,200",
-    //         NumberOfPeople:"290",
-    //         score:"4.0",
-    //         NumberOfPeople:"333",
-    //     },
-    // ]
-
-    // const duplicatedTopChoices = [...TopChoices, ...TopChoices];
-    // 重複兩次資料
-
     return(
         <>
             {/* <div className='IndexMainTopChoices-mb position-relative py-80 py-lg-120'> */}
