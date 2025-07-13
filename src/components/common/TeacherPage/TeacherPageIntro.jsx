@@ -50,13 +50,13 @@ const[teacherClassAllCommentsData,setTeacherClassAllCommentsData]=useState(null)
                                 </p>
                                 <div className='icon-container'>
                                     <button>
-                                        <img className='line-icon' src="/image/icons/line2.png" alt="" />
+                                        <img className='line-icon' src={`${import.meta.env.BASE_URL}image/icons/line2.png`} alt="" />
                                     </button>
                                     <button>
-                                        <img className='youtube-icon' src="/image/icons/youtube2.png" alt="" />
+                                        <img className='youtube-icon' src={`${import.meta.env.BASE_URL}image/icons/youtube2.png`} alt="" />
                                     </button>
                                     <button>
-                                        <img className='facebook-icon' src="/image/icons/facebook2.png" alt="" />
+                                        <img className='facebook-icon' src={`${import.meta.env.BASE_URL}image/icons/facebook2.png`} alt="" />
                                     </button>
                                 </div>
                             </div> 

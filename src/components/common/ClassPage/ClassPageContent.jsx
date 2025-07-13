@@ -270,7 +270,7 @@ function ClassPageContent ({classPageAllData,userData}){
                                                         <p>我們將深入了解您想發展的領域，每位實習生我們都會量身打造專屬於您的舞台，並讓您實際瞭解公司營運 Know how。</p>
                                                     </div>
                                                     <div className='Resume-container'>
-                                                        <button className='border-0 p-0' onClick={()=>{handleGoToTeacherPage(allData,classPageAllData[0]?.id,navigate)}}>
+                                                        <button className='border-0 p-0 bg-ffffff' onClick={()=>{handleGoToTeacherPage(allData,classPageAllData[0]?.id,navigate)}}>
                                                             了解更多講師履歷
                                                             <span class="material-symbols-outlined">
                                                                 arrow_forward_ios

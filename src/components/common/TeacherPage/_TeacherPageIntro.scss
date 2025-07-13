@@ -111,10 +111,14 @@
                 }
             }
             .icon-container{
+                margin-top: 24px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 16px;
+                @media (min-width: 992px) { 
+                    margin-top: 0px;
+                }
                 button{
                     width: 40px;
                     height: 40px;
