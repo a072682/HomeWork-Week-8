@@ -60,13 +60,13 @@ function IndexMainIntro ({allData}){
                                     <div className="slide-item px-16 px-lg-0 d-flex flex-lg-column">
                                     
                                         <img className="slide-item-in" src={item.cardData?.bigImg} alt="" />
-                                        <img className="slide-item-in-icon d-none d-lg-block" src="/image/deco/flower-4.png" alt="" />
+                                        <img className="slide-item-in-icon d-none d-lg-block" src={`${import.meta.env.BASE_URL}image/deco/flower-4.png`} alt="" />
                                         
                                         <button className="slide-item-in2 mt-auto mb-48 ms-lg-40 mb-lg-32 border-0 p-8 p-lg-16 br-40 d-flex justify-content-center align-items-center gap-lg-8">
                                             <div className='slide-item-in2-btn px-12 py-8 br-40 gap-4 d-flex justify-content-center align-items-center
                                                             fw-600 fs-14 lh-15 col-0068FF poppins'>
                                                 熱銷課程
-                                                <img className='slide-item-in2-icon' src="/image/icons/ic_fire.png" alt="" />
+                                                <img className='slide-item-in2-icon' src={`${import.meta.env.BASE_URL}image/icons/ic_fire.png`} alt="" />
                                             </div>
                                             <p className=   'slide-item-in2-text fw-600 col-000000 poppins text-start'>
                                                 {item.title}
