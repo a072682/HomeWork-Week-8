@@ -25,11 +25,6 @@ function Index (){
             <IndexMainTopChoices allData={allData}/>
             <IndexMainList allData={allData}/>
             <IndexMainBestTeacher allData={allData}/>
-        
-            <Link to="/OrderPage">記得刪除4</Link>
-            <Link to="/OrderPage2">記得刪除5</Link>
-            <Link to="/OrderPage3">記得刪除6</Link>
-            <Link to="/ProfilePage">記得刪除7</Link>
         </>
     )
 }
