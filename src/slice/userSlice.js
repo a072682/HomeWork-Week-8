@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-
 const initialUsers = [
   {
     id:"adminuser",
@@ -58,7 +57,6 @@ const userSlice = createSlice({
         //dispatch(matchUser({ email, password }));
         //dispatch(login({ email }));             // 設定 auth 狀態為已登入
         //dispatch(loadUserData({ email }));      // 載入該使用者的個人資料
-
 
         // ✅ 根據 email 載入該使用者的資料（通常在刷新後重新初始化用）
         //資料刷新用

@@ -76,7 +76,7 @@ function IndexMainIntro ({allData}){
                                             <div className='slide-item-in3-text mx-auto fw-600 fs-40 lh-12 col-ffffff poppins
                                                             d-flex justify-content-center al ign-items-center'>
                                                 探索感興趣的課程，今天立即上課
-                                                <span class="material-symbols-outlined fs-44 ms-16">
+                                                <span className="material-symbols-outlined fs-44 ms-16">
                                                     arrow_forward
                                                 </span> 
                                             </div>
@@ -96,12 +96,12 @@ function IndexMainIntro ({allData}){
                         ))}
                             <div className="swiper-pagination"></div>
                             <button className="swiper-button-prev d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                <span class="material-symbols-outlined">
+                                <span className="material-symbols-outlined">
                                     arrow_back
                                 </span>
                             </button>
                             <button className="swiper-button-next d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                <span class="material-symbols-outlined">
+                                <span className="material-symbols-outlined">
                                     arrow_forward
                                 </span>
                             </button >

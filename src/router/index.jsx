@@ -10,12 +10,6 @@ import OrderPage from "../pages/OrderPage";
 import OrderPage2 from "../pages/OrderPage2";
 import OrderPage3 from "../pages/OrderPage3";
 import ProfilePage from "../pages/ProfilePage";
-
-
-
-
-
-
 const router = createHashRouter([ //createHashRouter為建立router的方法
 	{
 		path:"/",

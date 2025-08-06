@@ -73,12 +73,12 @@ function IndexMainTopChoices ({allData}){
                                         </Swiper>
                                         <div className='TopChoices-card-btn'>
                                             <button className="swiper-button02-prev d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                                <span class="material-symbols-outlined">
+                                                <span className="material-symbols-outlined">
                                                     arrow_back
                                                 </span>
                                             </button>
                                             <button className="swiper-button02-next d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                                <span class="material-symbols-outlined">
+                                                <span className="material-symbols-outlined">
                                                     arrow_forward
                                                 </span>
                                             </button >

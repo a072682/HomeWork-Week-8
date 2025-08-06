@@ -23,10 +23,20 @@ function Header() {
 
     const userData = useSelector((state) => state.user.currentUserData);
 
-    
+    const email = useSelector((state) => state.user.useremail);
+
+    const isLoggedIn = useSelector((state) => {//讀取中央資料
+        return(
+            state.auth.isLoggedIn
+        )
+    });
+
+    useEffect(()=>{
+        console.log("目前登入狀態:",isLoggedIn)
+    },[isLoggedIn]);
+
     useEffect(() => {
-        const email = localStorage.getItem('fakeEmail');
-        const isLoggedIn = localStorage.getItem('fakeLogin') === 'true';
+        
 
         if (isLoggedIn && email) {
         dispatch(login({ email })); // 還原登入狀態
@@ -76,15 +86,7 @@ function Header() {
         return result;
     };
 
-    const isLoggedIn = useSelector((state) => {//讀取中央資料
-        return(
-            state.auth.isLoggedIn
-        )
-    });
-
-    useEffect(()=>{
-        console.log("目前登入狀態:",isLoggedIn)
-    },[isLoggedIn]);
+    
 
     const allCardData = useSelector((state) => {//讀取中央資料
         return(
