@@ -1,19 +1,38 @@
 import { useEffect, useState } from 'react';
 import './_Order.scss';
-import { clearCart, goToOrder2 } from '../../../slice/userSlice';
-import { useDispatch } from 'react-redux';
+import { clearCart, goToOrder2, loadUserData } from '../../../slice/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { handleCartTotalPrice } from '../../../slice/dataSlice';
+import { login } from '../../../slice/authSlice';
 
-function Order({userData,id_name}) {
+
+function Order({id_name}) {
 
   const navigate = useNavigate();
 
   const dispatch = useDispatch();//使用中央函式
 
   const[shoppingCartData,setShoppingCartData] = useState(null);
-  
 
+  const userData = useSelector((state) => state.user.currentUserData);
+
+  useEffect(()=>{
+      console.log("OrderUserData:",userData);
+  },[userData]);
+  
+  useEffect(() => {
+      const email = localStorage.getItem('fakeEmail');
+      console.log("取得的email",email);
+      const isLoggedIn = localStorage.getItem('fakeLogin') === 'true';
+      // const savedUserData = localStorage.getItem('currentUserData');
+
+      if (isLoggedIn && email) {
+        dispatch(login({ email })); // 還原登入狀態
+        dispatch(loadUserData({ email })); 
+        // 還原 currentUserData
+      }
+  }, []);
 
   const handleshoppingCartData = (data)=>{
     setShoppingCartData(data);

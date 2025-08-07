@@ -31,7 +31,7 @@ function OrderPage (){
 
       if (isLoggedIn && email) {
         dispatch(login({ email })); // 還原登入狀態
-        // dispatch(loadUserData({ email })); 
+        dispatch(loadUserData({ email })); 
         // 還原 currentUserData
       }
       

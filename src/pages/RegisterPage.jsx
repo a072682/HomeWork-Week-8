@@ -1,11 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './_RegisterPage.scss';
 import { Container } from 'react-bootstrap';
 import { Fragment, useState } from 'react';
-
-
+import { registerUser } from '../slice/userSlice';
+import { useDispatch } from 'react-redux';
+import { login } from '../slice/authSlice';
 
 function RegisterPage (){
+
+    const navigate = useNavigate();//頁面跳轉宣告
+
+    const dispatch = useDispatch();//使用中央函式
 
     const [useremail, setUseremail] = useState('');
     const [errorMsg, setErrorMsg] = useState(''); // ⬅️ 錯誤訊息狀態
@@ -16,7 +21,7 @@ function RegisterPage (){
     const [showPassword02, setShowPassword02] = useState(false);
     const [password02, setPassword02] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit01 = (e) => {
         e.preventDefault();
 
         if (!useremail || !password || !password02) {
@@ -36,6 +41,48 @@ function RegisterPage (){
         // setErrorMsg('');
         // console.log('登入成功');
         navigate("/");
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!useremail || !password || !password02) {
+            setErrorMsg(!useremail ? '請輸入帳號' : '請輸入密碼');
+            console.log("註冊失敗，請輸入帳號或密碼")
+            return;
+        }else if(password !== password02){
+            setErrorMsg("確認確認請與密碼相同");
+            console.log("註冊失敗，確認確認請與密碼相同")
+            return;
+        }
+
+        // ✅ 假設基本驗證
+        if (useremail && password === password02) {
+        setErrorMsg('');
+        // 模擬註冊成功，清空表單
+        setUseremail('');
+        setPassword('');
+        setPassword02('');
+        dispatch((registerUser(
+            {
+            email:useremail,
+            password,
+            }
+        )))
+        // 取得比對後的登入結果
+        const found = JSON.parse(localStorage.getItem('currentUserData'));
+
+        if (found && found.email === useremail) {
+            setErrorMsg('');
+            console.log('創建帳號成功');
+            dispatch(login({ email: useremail }));
+            navigate('/');
+        } else {
+            setErrorMsg('創建帳號失敗');
+        }
+        } else {
+        setErrorMsg('請填寫所有欄位');
+        }
     };
     
 

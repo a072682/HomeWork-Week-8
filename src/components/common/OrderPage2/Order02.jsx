@@ -3,10 +3,10 @@ import './_Order02.scss';
 import { Collapse, Dropdown } from 'react-bootstrap';
 import WaitingModal from '../WaitingModal/WaitingModal';
 import { useDispatch, useSelector } from "react-redux";
-import { billDataUp, payDataUp } from '../../../slice/userSlice';
+import { billDataUp, loadUserData, payDataUp } from '../../../slice/userSlice';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
-
+import { login } from '../../../slice/authSlice';
 
 function Order02() {
 
@@ -18,8 +18,21 @@ function Order02() {
     const userData = useSelector((state) => state.user.currentUserData);
 
     useEffect(()=>{
-            console.log("Order2Data:",userData);
-        },[userData]);
+            // console.log("Order2Data:",userData);
+    },[userData]);
+
+    useEffect(() => {
+        const email = localStorage.getItem('fakeEmail');
+        console.log("取得的email",email);
+        const isLoggedIn = localStorage.getItem('fakeLogin') === 'true';
+        // const savedUserData = localStorage.getItem('currentUserData');
+  
+        if (isLoggedIn && email) {
+          dispatch(login({ email })); // 還原登入狀態
+          dispatch(loadUserData({ email })); 
+          // 還原 currentUserData
+        }
+    }, []);
 
     const orderPage2Data = userData?.shoppingCart?.items?.filter((item) => item.paySelect === true);
     // console.log("過濾後資料:",orderPage2Data);
@@ -90,6 +103,10 @@ function Order02() {
         ]
         //信用卡資料
         const handleCreditCardSubmit = () => {
+            if(!selectedPayment){
+                alert("請選擇付款方式");
+                return false;
+            }
             const payData = {
                 method: selectedPayment,
                 cardData: cardForm, // ✅ 這裡用最新的資料
@@ -99,6 +116,7 @@ function Order02() {
                 email:userData?.email,
                 payData:payData,
             }));
+            return true;
         };
 
         //付款方式狀態
@@ -142,17 +160,32 @@ function Order02() {
         //發票資料
         const handleBillDataSubmit = () => {
             console.log("發票資料上傳:",billForm);
+            // 使用簡單的正規表達式來檢查電子郵件格式
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(billForm.name === "" || billForm.email === ""){
+                alert("請輸入姓名和電子信箱");
+                return false;
+            }else if(!emailPattern.test(billForm.email)){
+                alert("請輸入有效的電子信箱");
+                return false; // 返回 false，表示失敗
+            }
             dispatch(billDataUp({
                 email:userData?.email,
                 billData:billForm,
             }));
+            return true;
         }
     //
 
     //資料上傳
         const handleDataUp = ()=>{
-            handleCreditCardSubmit()
-            handleBillDataSubmit();
+            const creditCardSubmitSuccess = handleCreditCardSubmit();
+            const billDataSubmitSuccess = handleBillDataSubmit();
+
+            // 檢查兩個函數是否都成功執行
+            if (creditCardSubmitSuccess && billDataSubmitSuccess) {
+                setOpen(true); // 只有當兩者都成功時才會執行 setOpen(true)
+            }
         }
 
 
@@ -381,7 +414,7 @@ function Order02() {
                                           <p className='total-price'>NT$ {orderPage2TotalPrice}</p>
                                       </div>
                                       <div className='btn_text'>
-                                          <button onClick={() => {setOpen(true);handleDataUp();}}>同意並付款 </button>
+                                          <button onClick={() => {handleDataUp();}}>同意並付款 </button>
                                           <p className='caption-text'>確認購買即表示您已審閱 Learning 所提供之購物相關條款，並同意條款內容。</p>
                                       </div>
                                   </div>
@@ -409,7 +442,7 @@ function Order02() {
               <p className='price'>NT$ 0</p>
             </div>
             <div className='btn02'>
-              <button onClick={() => setOpen(true)}>同意並付款</button>
+              <button onClick={() => {handleDataUp()}}>同意並付款</button>
             </div>
           </div>
       </div>

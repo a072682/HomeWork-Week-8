@@ -36,6 +36,12 @@ const userSlice = createSlice({
             //解構結果 
             //email = 'andy@gmail.com'
             //password = 'andy123'
+
+            //取得所有註冊者的資料
+            const storedUsers = JSON.parse(localStorage.getItem('fakeUsers'));
+            //註冊者資料引入state.users
+            state.users = storedUsers || initialUsers;
+
             const found = state.users.find(//判定方式
                 (item) => item.email === email && item.password === password
             );
@@ -62,8 +68,16 @@ const userSlice = createSlice({
         //資料刷新用
         loadUserData: (state, action) => {
           const { email } = action.payload;
+          
+          //從 localStorage 取出目前登入者資料
           const savedUserData = JSON.parse(localStorage.getItem('currentUserData'));
           console.log("從currentUserData轉換的資料:",savedUserData);
+
+          //從localStorage 取出所有註冊者資料
+          const storedUsers = JSON.parse(localStorage.getItem('fakeUsers'));
+          state.users = storedUsers || initialUsers;
+
+          //確認使用者
           const user = state.users.find((u) => u.email === email);
 
           if (user) {
@@ -75,6 +89,57 @@ const userSlice = createSlice({
             return;
           }
         },
+
+        //註冊新會員
+        registerUser: (state, action) => {
+            const { email, password,  } = action.payload;
+
+            //從localStorage 取出所有註冊者資料
+            const storedUsers = JSON.parse(localStorage.getItem('fakeUsers'));
+            state.users = storedUsers || initialUsers;
+
+            //確認信箱是否有重複註冊
+            const exist = state.users.some((user) => user.email === email);
+            //如果有則跳出程序
+            if (exist) {
+              alert('此信箱已被註冊');
+              return;
+            }
+
+            //建立新會員資料
+            const newUser = {
+              id:email,
+              email,
+              password,
+              name: '會員',
+              collection:[],
+              portfolio:[],
+              shoppingCart: {
+                totalPrice:null,
+                classtotalNumber:null,
+                items:[],
+                billData:null,
+                payData:null,
+              },
+              classes: {
+                InClass:[],
+                Waiting:[],
+                finish:[],
+              },
+              order:[],
+            };
+            
+            //推入state.users陣列中
+            state.users.push(newUser);
+
+            //存進 localStorage
+            localStorage.setItem('fakeUsers', JSON.stringify(state.users));
+
+            // ✅ 登入同步
+            state.currentUserData = newUser;
+            localStorage.setItem('currentUserData', JSON.stringify(newUser));
+        },
+
 
         // ✅ 根據 email 更新購物車資料
         updateCart: (state, action) => {
@@ -317,5 +382,5 @@ const userSlice = createSlice({
   },
 });
 
-export const { matchUser,loadUserData,updateCart,clearCart,goToOrder2,billDataUp,payDataUp,orderTransfer } = userSlice.actions; //是為了在外部可以使用函式
+export const { matchUser,loadUserData,updateCart,clearCart,goToOrder2,billDataUp,payDataUp,orderTransfer,registerUser } = userSlice.actions; //是為了在外部可以使用函式
 export default userSlice.reducer;
