@@ -1,5 +1,5 @@
     .card02{
-        margin: 8px;
+        // margin: 8px;
         padding: 8px 12px;
         border-radius: 20px;
         overflow: hidden;
@@ -14,7 +14,7 @@
             .card02-img-box{
                 width: 100%;
                 @media (max-width: 992px) { 
-                    flex: 1 1 30%;
+                    flex: 1 1 50%;
                 }
                 .card02-img{
                     max-width: 100%;
@@ -48,10 +48,10 @@
             }
             .card02-body{
                 
-                padding: 24px 8px;
+                padding: 24px 0px;
 
                 @media (max-width: 992px) { 
-                    flex: 1 1 70%;
+                    flex: 1 1 50%;
                     width: 100%;
                     padding:0px;
                 }
@@ -70,28 +70,30 @@
                 }
                 .card02-content{
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
                     align-items: center;
                     margin-top: 16px;
-                    
+                    gap: 48px;
                     @media (max-width: 1400px) { 
                         min-height: 85px;
                         margin-top: 0px;
                     }
-                    @media (max-width: 1200px) { 
-                        min-height: 100px;
+                    // @media (max-width: 1200px) { 
+                    //     min-height: 100px;
                         
-                    }
+                    // }
                     @media (max-width: 992px) { 
                         margin-top: 8px;
+                        gap: 0px;
                     }
                     .card02-user{
                         display: flex;
                         justify-content: start;
                         align-items: center;
+                        flex-direction:column;
                         gap: 8px;
                         @media (min-width: 992px) { 
-                            flex-direction:column;
+                            
                         }
                         @media (min-width: 1200px) { 
                             flex-direction:row;
@@ -118,10 +120,13 @@
                     }
                     .card02-text{
                         div{
+                            text-align: end;
+                            min-width: 92px;
                             font-weight: 700;
                             font-size: 20px;
                             color: #0068ff;
                             font-family: 'Noto Sans TC', sans-serif;
+                            width: fit-content;
                             @media (max-width: 992px) { 
                                 font-size: 16px;
                             }
@@ -141,22 +146,32 @@
                 }
                 .card02-content02{
                     display: flex;
+                    flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
                     margin-top: 32px;
+                    gap: 8px;
                     @media (max-width: 992px) { 
                         margin-top: 0px;
                         padding: 8px 0px;
+                        flex-direction: column;
+                        gap: 4px;
                     }
                     .card02-text02{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        @media (max-width: 992px) { 
+                            flex-direction: column;
+                        }
                         .text01{
                             width: fit-content;
                             border-radius: 100px;
                             background-color: #ececec;
                             color: #4b4b4b;
                             font-weight: 400;
-                            font-size: 14px;
-                            padding: 4px 12px 4px 12px;
+                            font-size: 14px; 
                         }
                         .text02{
                             font-weight: 400;

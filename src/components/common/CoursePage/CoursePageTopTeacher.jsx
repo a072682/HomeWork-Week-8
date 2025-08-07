@@ -37,7 +37,7 @@ function CoursePageTopTeacher ({coursePageAllData}){
     };
 
     useEffect(() => {
-        const result = getTopCoursePageItems(coursePageAllData,4);
+        const result = getTopCoursePageItems(coursePageAllData,3);
         const result02 = handleTeacherNumALLDate(result);
         setCoursePageTopTeacherData(result); 
         setTeacherNumALLDate(result02);
@@ -58,15 +58,17 @@ function CoursePageTopTeacher ({coursePageAllData}){
                                         coursePageTopTeacherData.map((item,index)=>{
                                             return(
                                                 <Fragment key={index}>
-                                                    <div className="col-12 col-lg-3 mx-auto">
+                                                    <div className="col-12 col-sm-4 col-lg-4  mx-auto">
                                                         <button className="TopTeacher-box" onClick={()=>{handleGoToTeacherPage(allData,item.id,navigate);}}>
                                                             <div className="TopTeacher-img-box">
                                                                 <img className="TopTeacher-img" src={item.classData.teacher.teacherImg} alt="" />
                                                             </div>
+                                                            
                                                             <div className="TopTeacher-content">
                                                                 <h5>{item.classData.teacher.teacherName}</h5>
                                                                 <p>{item.classData.teacher.teacherCaption}</p>
                                                             </div>
+                                                        
                                                             <div className="TopTeacher-content2">
                                                                 <p className="TopTeacher-num">{teacherNumALLDate} 個學生</p>
                                                                 <div className="TopTeacher-evaluate">
@@ -75,6 +77,7 @@ function CoursePageTopTeacher ({coursePageAllData}){
                                                                     </p>
                                                                 </div> 
                                                             </div>
+                                                            
                                                         </button>
                                                     </div>
                                                 </Fragment>

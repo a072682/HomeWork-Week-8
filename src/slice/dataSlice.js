@@ -3578,6 +3578,7 @@ export const getCoursePageAllData = (input,id_first) => {
     return coursePageAllData;
 }
 
+//根據progress選出最高的資料
 export const getTopProgressItems = (input, num) => {
   const allProgressItems = [];
 
@@ -3607,6 +3608,31 @@ export const getTopProgressItems = (input, num) => {
   return allProgressItems
     .sort((a, b) => b.cardData.progressValue - a.cardData.progressValue)
     .slice(0, num);
+};
+
+//根據price選出最低的資料
+export const getLowPriceItems = (input) => {
+  const allPriceItems = [];
+
+  input.forEach(section => {
+    const groups = section.children || [];
+    groups.forEach(group => {
+      const items = group.children || [];
+      items.forEach(item => {
+        const priceStr = item.cardData?.price;
+        if (priceStr) {
+             // 先解析進度值
+            const newItem = {
+                ...item,
+            };
+            allPriceItems.push(newItem);
+        }
+      });
+    });
+  });
+
+  return allPriceItems
+    .sort((a, b) => a.cardData.price - b.cardData.price)
 };
 
 

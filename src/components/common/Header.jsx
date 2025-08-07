@@ -36,13 +36,10 @@ function Header() {
     },[isLoggedIn]);
 
     useEffect(() => {
-        
-
         if (isLoggedIn && email) {
         dispatch(login({ email })); // 還原登入狀態
         dispatch(loadUserData({ email })); // 還原 currentUserData
         }
-        
     }, []);
 
     useEffect(()=>{
@@ -54,6 +51,10 @@ function Header() {
 
     const dispatch = useDispatch();//使用中央函式
 
+    const [errorMsg,setErrorMsg] = useState("搜尋各種音樂、數學、程式及設計課程");
+
+    useEffect(()=>{},[errorMsg]);
+
     const handleSearch = (input) => {
         const keyword = searchIn.trim();//移除搜尋欄資料的空白
         dispatch(searchInput(keyword));
@@ -61,6 +62,7 @@ function Header() {
             console.log("請輸入文字");
             return;
         };
+
         let result = null;
         input.forEach(item_first => {
             if (result) return; // 提前跳出後續處理
@@ -75,6 +77,7 @@ function Header() {
         });
         if (!result) {
             setSearchIn("");
+            alert("找不到相關課程");
             console.log("找不到相關課程");
             return;
         }
@@ -174,7 +177,7 @@ function Header() {
                         handleSearch(allData);
                     }}>
                 <i className="material-symbols-outlined search-icon">search</i>
-                <input  type="text" placeholder="搜尋各種音樂、數學、程式及設計課程" className="form-control" aria-label="Search"
+                <input  type="text" placeholder={errorMsg} className="form-control" aria-label="Search"
                         value={searchIn}
                         onChange={(e) => setSearchIn(e.target.value)}/>
                 <button type="submit" className="search-btn" onClick={()=>{handleSearch(allData);}}>搜尋</button>

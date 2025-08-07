@@ -50,28 +50,25 @@ function CoursePageHotChoice ({coursePageAllData}){
         console.log("整理過後的矩陣:", result);
     }, [coursePageAllData]);
 
-    const TopicsItem = [
-        {
-            title:"HTML 5",
-            num:"2103",
-        },
-        {
-            title:"Javascript",
-            num:"891",
-        },
-        {
-            title:"CSS 3 ",
-            num:"240",
-        },
-        {
-            title:"Python",
-            num:"1384",
-        },
-    ]
-
     const [activeTab, setActiveTab] = useState('popular');//tab控制
 
-    
+    const CoursePageHotChoiceTabData = [
+        {
+            id:"popular",
+            name:"最熱門",
+            key:"popular",
+        },
+        {
+            id:"newclasses",
+            name:"最新課程",
+            key:"newclasses",
+        },
+        {
+            id:"hottopics",
+            name:"話題最高",
+            key:"hottopics",
+        },
+    ]
 
     return(
         <>  
@@ -81,164 +78,79 @@ function CoursePageHotChoice ({coursePageAllData}){
                         <div className="col">
                             <Tab.Container activeKey={activeTab} onSelect={(key) => setActiveTab(key)}>
                                 <Nav className='HotChoice-nav'>
-                                    <Nav.Item className='HotChoice-nav-item'>
-                                        <Nav.Link className="nav-link" eventKey="popular">最熱門</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item className="HotChoice-nav-item">
-                                        <Nav.Link className="nav-link" eventKey="newclasses">最新課程</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item className="HotChoice-nav-item">
-                                        <Nav.Link className="nav-link" eventKey="hottopics">話題最高</Nav.Link>
-                                    </Nav.Item>
+                                    {
+                                        CoursePageHotChoiceTabData?.map((item)=>{
+                                            return(
+                                                <>
+                                                    <Nav.Item key={item.id} className='HotChoice-nav-item'>
+                                                        <Nav.Link className="nav-link" eventKey={item.key}>{item.name}</Nav.Link>
+                                                    </Nav.Item>
+                                                </>
+                                            )
+                                        })
+                                    }
                                 </Nav>
                                 <Tab.Content className='HotChoice-tab-content '>
-                                    <Tab.Pane eventKey="popular">
-                                        <div className='HotChoice-cardgroups'>
-                                            <Swiper
-                                                className='h-100'
-                                                modules={[EffectCoverflow,Navigation]}
-                                                slidesPerView={1}
-                                                loop={true}
-                                                spaceBetween={8}
-                                                navigation={{
-                                                    nextEl: '.swiper-button02-next',
-                                                    prevEl: '.swiper-button02-prev',
-                                                }}
-                                                breakpoints={{
-                                                    768: {
-                                                    spaceBetween: 8,
-                                                    slidesPerView: 2,
-                                                    },
-                                                    992: {
-                                                    spaceBetween: 16,
-                                                    slidesPerView: 3,
-                                                    },
-                                                    1200: {
-                                                    spaceBetween: 24,
-                                                    slidesPerView: 4,
-                                                    },
-                                                }}
-                                                >
-                                                {coursePageData.map((item,index) => (
-                                                    <SwiperSlide key={index}>
-                                                        <button type='button' className='border-0 p-0' onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
-                                                            <Card04 item={item} />
-                                                        </button>
-                                                    </SwiperSlide>
-                                                ))}
-                                            </Swiper>
-                                            <div className='HotChoice-card-btn'>
-                                                <button className="swiper-button02-prev d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                                    <span class="material-symbols-outlined">
-                                                        arrow_back
-                                                    </span>
-                                                </button>
-                                                <button className="swiper-button02-next d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                                    <span class="material-symbols-outlined">
-                                                        arrow_forward
-                                                    </span>
-                                                </button >
-                                            </div>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="newclasses">
-                                        <div className='HotChoice-cardgroups'>
-                                            <Swiper
-                                                className='h-100'
-                                                modules={[EffectCoverflow,Navigation]}
-                                                slidesPerView={1}
-                                                loop={true}
-                                                spaceBetween={8}
-                                                navigation={{
-                                                    nextEl: '.swiper-button02-next',
-                                                    prevEl: '.swiper-button02-prev',
-                                                }}
-                                                breakpoints={{
-                                                    768: {
-                                                    spaceBetween: 8,
-                                                    slidesPerView: 2,
-                                                    },
-                                                    992: {
-                                                    spaceBetween: 16,
-                                                    slidesPerView: 3,
-                                                    },
-                                                    1200: {
-                                                    spaceBetween: 24,
-                                                    slidesPerView: 4,
-                                                    },
-                                                }}
-                                                >
-                                                {coursePageData.map((item,index) => (
-                                                    <SwiperSlide key={index}>
-                                                        <button type='button' className='border-0 p-0' onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
-                                                            <Card04 item={item} />
-                                                        </button>
-                                                    </SwiperSlide>
-                                                ))}
-                                            </Swiper>
-                                            <div className='HotChoice-card-btn'>
-                                                <button className="swiper-button02-prev d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                                    <span class="material-symbols-outlined">
-                                                        arrow_back
-                                                    </span>
-                                                </button>
-                                                <button className="swiper-button02-next d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                                    <span class="material-symbols-outlined">
-                                                        arrow_forward
-                                                    </span>
-                                                </button >
-                                            </div>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="hottopics">
-                                        <div className='HotChoice-cardgroups'>
-                                            <Swiper
-                                                className='h-100'
-                                                modules={[EffectCoverflow,Navigation]}
-                                                slidesPerView={1}
-                                                loop={true}
-                                                spaceBetween={8}
-                                                navigation={{
-                                                    nextEl: '.swiper-button02-next',
-                                                    prevEl: '.swiper-button02-prev',
-                                                }}
-                                                breakpoints={{
-                                                    768: {
-                                                    spaceBetween: 8,
-                                                    slidesPerView: 2,
-                                                    },
-                                                    992: {
-                                                    spaceBetween: 16,
-                                                    slidesPerView: 3,
-                                                    },
-                                                    1200: {
-                                                    spaceBetween: 24,
-                                                    slidesPerView: 4,
-                                                    },
-                                                }}
-                                                >
-                                                {coursePageData.map((item,index) => (
-                                                    <SwiperSlide key={index}>
-                                                        <button type='button' className='border-0 p-0' onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
-                                                            <Card04 item={item} />
-                                                        </button>
-                                                    </SwiperSlide>
-                                                ))}
-                                            </Swiper>
-                                            <div className='HotChoice-card-btn'>
-                                                <button className="swiper-button02-prev d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                                    <span class="material-symbols-outlined">
-                                                        arrow_back
-                                                    </span>
-                                                </button>
-                                                <button className="swiper-button02-next d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
-                                                    <span class="material-symbols-outlined">
-                                                        arrow_forward
-                                                    </span>
-                                                </button >
-                                            </div>
-                                        </div>
-                                    </Tab.Pane>
+                                    {
+                                        CoursePageHotChoiceTabData?.map((item)=>{
+                                            return(
+                                                <>
+                                                    <Tab.Pane key={item.id} eventKey={item.key}>
+                                                        <div className='HotChoice-cardgroups'>
+                                                            <Swiper
+                                                                className='h-100'
+                                                                modules={[EffectCoverflow,Navigation]}
+                                                                slidesPerView={1}
+                                                                loop={true}
+                                                                spaceBetween={8}
+                                                                navigation={{
+                                                                    nextEl: '.swiper-button02-next',
+                                                                    prevEl: '.swiper-button02-prev',
+                                                                }}
+                                                                breakpoints={{
+                                                                    768: {
+                                                                    spaceBetween: 8,
+                                                                    slidesPerView: 2,
+                                                                    },
+                                                                    992: {
+                                                                    spaceBetween: 16,
+                                                                    slidesPerView: 3,
+                                                                    },
+                                                                    1200: {
+                                                                    spaceBetween: 24,
+                                                                    slidesPerView: 4,
+                                                                    },
+                                                                }}
+                                                                >
+                                                                {coursePageData.map((item,index) => (
+                                                                    <SwiperSlide key={index}>
+                                                                        <button type='button' 
+                                                                                className='border-0 p-0 w-100 px-46 px-md-0' 
+                                                                                onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}
+                                                                                style={{backgroundColor:"transparent",}}>
+                                                                            <Card04 item={item} />
+                                                                        </button>
+                                                                    </SwiperSlide>
+                                                                ))}
+                                                            </Swiper>
+                                                            <div className='HotChoice-card-btn'>
+                                                                <button className="swiper-button02-prev d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
+                                                                    <span class="material-symbols-outlined">
+                                                                        arrow_back
+                                                                    </span>
+                                                                </button>
+                                                                <button className="swiper-button02-next d-none border-0 p-0 d-lg-flex justify-content-center align-items-center">
+                                                                    <span class="material-symbols-outlined">
+                                                                        arrow_forward
+                                                                    </span>
+                                                                </button >
+                                                            </div>
+                                                        </div>
+                                                    </Tab.Pane>
+                                                </>
+                                            )
+                                        })
+                                    }
                                 </Tab.Content>
                             </Tab.Container>
                         </div>

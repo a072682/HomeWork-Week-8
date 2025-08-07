@@ -10,9 +10,11 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function CoursePageClass ({coursePageAllData}){
+function CoursePageClass ({coursePageAllData,coursePageTitleData,coursePageLowPriceData}){
 
     const navigate = useNavigate();
+
+    console.log("看看",coursePageTitleData);
     
     const allData = useSelector((state) => state.data.defaultClassData);
 
@@ -66,7 +68,7 @@ function CoursePageClass ({coursePageAllData}){
                                 
                                 <Tab.Container activeKey={activeTab} onSelect={(key) => setActiveTab(key)}>
                                     <div className='CoursePageClass-top'>
-                                        <h2 className="class-title">查看 {coursePageClassData.length} 筆與「<span>{CoursePageTabData}</span>」的相關課程</h2>
+                                        <h2 className="class-title">查看 {coursePageClassData.length} 筆與「<span>{CoursePageTabData === "所有課程"?(`所有${coursePageTitleData[0]?.label}`):(CoursePageTabData)}</span>」的相關課程</h2>
                                         <Nav className='class-tabs'>
                                             <Nav.Item className=''>
                                                 <Nav.Link className={`class-tab ${ClassBtn === "最新課程" ? ("active"):("")} `} eventKey="NewCourse" onClick={()=>{setClassBtn("最新課程")}}>最新課程</Nav.Link>
@@ -81,12 +83,12 @@ function CoursePageClass ({coursePageAllData}){
                                     </div>
                                     <Tab.Content className='HotChoice-tab-content '>
                                         <Tab.Pane eventKey="NewCourse">
-                                            <div className="row">
+                                            <div className="row row-gap-12">
                                                 {
                                                     paginatedData.map((item,index)=>{
                                                         return(
                                                             <Fragment key={index}>
-                                                                <div className="col-12 col-lg-3">
+                                                                <div className="col-12 col-md-6 col-lg-4 col-xl-3">
                                                                     <button type="button" className="border-0 p-0 w-100" onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
                                                                         <Card02 item={item}/>
                                                                     </button>
@@ -118,10 +120,10 @@ function CoursePageClass ({coursePageAllData}){
                                         <Tab.Pane eventKey="LowPrice">
                                             <div className="row">
                                                 {
-                                                    paginatedData.map((item,index)=>{
+                                                    coursePageLowPriceData?.map((item,index)=>{
                                                         return(
                                                             <Fragment key={index}>
-                                                                <div className="col-12 col-lg-3">
+                                                                <div className="col-12 col-md-6 col-lg-3">
                                                                     <button type="button" className="border-0 px-12 w-100" onClick={()=>{handleGoToClassPage(allData,item.id,navigate)}}>
                                                                         <Card02 item={item}/>
                                                                     </button>

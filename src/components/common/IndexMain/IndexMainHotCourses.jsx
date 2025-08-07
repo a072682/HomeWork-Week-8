@@ -36,7 +36,7 @@ function IndexMainHotCourses ({allData}){
                 <div className="row">
                     <div className="col">
                         <div className='IndexMainHotCourses-mb position-relative d-block d-lg-none'>
-                            <img className="position-absolute IndexMainHotCourses-mb-deco" src="/image/deco/flower-2.png" alt="" />
+                            <img className="position-absolute IndexMainHotCourses-mb-deco" src={`${import.meta.env.BASE_URL}image/deco/flower-2.png`} alt="" />
                             <div className='IndexMainHotCourses-content py-80'>
                                 <h2>火熱募資課程</h2> 
                                 <p>現在購買最優惠✨</p>
@@ -94,7 +94,7 @@ function IndexMainHotCourses ({allData}){
                             </div>
                         </div>
                         <div className='IndexMainHotCourses-dk my-120 d-none d-lg-block position-relative'>
-                            <img className="position-absolute IndexMainHotCourses-dk-deco" src="/image/deco/flower-2.png" alt="" />
+                            <img className="position-absolute IndexMainHotCourses-dk-deco" src={`${import.meta.env.BASE_URL}image/deco/flower-2.png`} alt="" />
                             <div className="row">
                                 <div className="col-4">
                                     <div className="HotCourses-dk-text d-flex flex-column gap-40 mt-160">
