@@ -29,7 +29,7 @@ function IndexMainTopChoices ({allData}){
                     <div className="row">
                         <div className="col">
                             <div className='IndexMainTopChoices-mb position-relative py-80 py-lg-120'>
-                                <img className="position-absolute IndexMainTopChoices-mb-deco" src="/image/deco/flower-1.png" alt="" />
+                                <img className="position-absolute IndexMainTopChoices-mb-deco" src={`${import.meta.env.BASE_URL}image/deco/flower-1.png`} alt="" />
                                 <div className='IndexMainTopChoices-content '>
                                     <div className='IndexMainTopChoices-title'>
                                         <h2 className='d-block d-lg-none'>看看大家</h2> 
