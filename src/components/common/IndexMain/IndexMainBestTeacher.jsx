@@ -53,7 +53,7 @@ function IndexMainBestTeacher (){
                                     <h2 className="d-block d-md-none">帶你飛 </h2>
                                     <h2 className="d-none d-md-block text-center">頂尖講師帶你飛 </h2>
                                     <p>超真實學員評價，這些講師你絕對不能錯過！✨</p>
-                                    <img className="position-absolute IndexMainBestTeacher-mb-deco" src="/image/deco/flower-1.png" alt="" />
+                                    <img className="position-absolute IndexMainBestTeacher-mb-deco" src={`${import.meta.env.BASE_URL}image/deco/flower-1.png`} alt="" />
                                 </div>
                                 <div className='IndexMainBestTeacher-cardgroups pt-24'>
                                     <Swiper
@@ -93,7 +93,7 @@ function IndexMainBestTeacher (){
                                     <div className='BestTeacher-dk-title position-relative' >
                                         <h2>頂尖講師帶你飛</h2>
                                         <p>超真實學員評價，這些講師你絕對不能錯過！✨</p>
-                                        <img className="position-absolute IndexMainBestTeacher-dk-deco" src="/image/deco/flower-1.png" alt="" />
+                                        <img className="position-absolute IndexMainBestTeacher-dk-deco" src={`${import.meta.env.BASE_URL}image/deco/flower-1.png`} alt="" />
                                     </div>
                                     
                                 </div>
